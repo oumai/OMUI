@@ -50,14 +50,22 @@ static NSString *identifier = @"ViewCollectionCell";
 #import "FDAlertView.h"
 #import "WYPopoverController.h"
 
+
+/*
+ 手势
+ */
+#import "GestureVC.h"
+
 @interface ViewController ()
 <UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 {
-    NSArray *array0;
+    NSArray *array;
     NSArray *array1;
     NSArray *array2;
     NSArray *array3;
     NSArray *array4;
+    NSArray *array5;
+
 }
 // <UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -89,11 +97,13 @@ static NSString *identifier = @"ViewCollectionCell";
     [self.collectionView registerClass:[HeaderCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderViewOM"];
     
    
-    [self.collectionView registerClass:[HeaderCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headerSelectType0"];
+    [self.collectionView registerClass:[HeaderCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headerSelectType"];
     [self.collectionView registerClass:[HeaderCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headerSelectType1"];
     [self.collectionView registerClass:[HeaderCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headerSelectType2"];
     [self.collectionView registerClass:[HeaderCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headerSelectType3"];
     [self.collectionView registerClass:[HeaderCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headerSelectType4"];
+    [self.collectionView registerClass:[HeaderCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headerSelectType5"];
+
 
 
     
@@ -103,11 +113,13 @@ static NSString *identifier = @"ViewCollectionCell";
     }];
     
     self.titleArray = [NSMutableArray array];
-    array0 = [NSArray arrayWithObjects:@"所有控件",@"所有控件详情",@"",@"",@"", nil];
+    array = [NSArray arrayWithObjects:@"所有控件",@"所有控件详情",@"",@"",@"", nil];
     array1 = [NSArray arrayWithObjects:@"自定义Cell",@"横向滑动的UITableView",@"",@"",@"", nil];
     array2 = [NSArray arrayWithObjects:@"渐变",@"左右切换UIScroll",@"",@"",@"", nil];
     array3 = [NSArray arrayWithObjects:@"水平的UICollectionViews",@"自定义Collections 有表头",@"",@"",@"", nil];
     array4 = [NSArray arrayWithObjects:@"弹框集合",@" ",@"",@"",@"", nil];
+    array5 = [NSArray arrayWithObjects:@"手势",@" ",@"",@"",@"", nil];
+
 
 }
 
@@ -120,7 +132,7 @@ static NSString *identifier = @"ViewCollectionCell";
     
     NSString *ID = nil;
     if (indexPath.section == 0) {
-        ID = @"headerSelectType0";
+        ID = @"headerSelectType";
     }
     else if(indexPath.section == 1)
     {
@@ -138,6 +150,10 @@ static NSString *identifier = @"ViewCollectionCell";
     {
         ID = @"headerSelectType4";
     }
+    else if(indexPath.section == 5)
+    {
+        ID = @"headerSelectType5";
+    }
 
     
     HeaderCollectionReusableView *view=[collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:ID forIndexPath:indexPath];
@@ -145,20 +161,22 @@ static NSString *identifier = @"ViewCollectionCell";
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         if (indexPath.section == 0) {
             
-            UILabel *label0=[[UILabel alloc]initWithFrame:CGRectMake(20, 10, 200, 20)];
-            label0.text=@"所有控件";
-            [view addSubview:label0];
+            UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(20, 10, 200, 20)];
+            label.text=@"所有控件";
+            label.textColor = [UIColor redColor];
+            [view addSubview:label];
             
         }
         if (indexPath.section == 1) {
             UILabel *label1=[[UILabel alloc]initWithFrame:CGRectMake(20, 10, 200, 20)];
-            
+            label1.textColor = [UIColor redColor];
             label1.text=@"UITableViews";
             [view addSubview:label1];
             
         }
         if (indexPath.section == 2) {
             UILabel *label2=[[UILabel alloc]initWithFrame:CGRectMake(20, 10, 200, 20)];
+            label2.textColor = [UIColor redColor];
             label2.text=@"UIScrollView";
             [view addSubview:label2];
             
@@ -166,14 +184,23 @@ static NSString *identifier = @"ViewCollectionCell";
         
         if (indexPath.section == 3) {
             UILabel *label3=[[UILabel alloc]initWithFrame:CGRectMake(20, 10, 200, 20)];
+            label3.textColor = [UIColor redColor];
             label3.text=@"UICollectionViews";
             [view addSubview:label3];
         }
         
         if (indexPath.section == 4) {
-            UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(20, 10, 200, 20)];
-            label.text=@"弹框";
-            [view addSubview:label];
+            UILabel *label4=[[UILabel alloc]initWithFrame:CGRectMake(20, 10, 200, 20)];
+            label4.textColor = [UIColor redColor];
+            label4.text=@"弹框";
+            [view addSubview:label4];
+        }
+        if (indexPath.section == 5) {
+            UILabel *label5=[[UILabel alloc]initWithFrame:CGRectMake(20, 10, 200, 20)];
+            label5.text=@"手势";
+            label5.textColor = [UIColor redColor];
+            [view addSubview:label5];
+
         }
 
         
@@ -187,7 +214,7 @@ static NSString *identifier = @"ViewCollectionCell";
 }
 //一共有多少个组
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 5;
+    return 6;
 }
 //每一组有多少个cell
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
@@ -198,7 +225,7 @@ static NSString *identifier = @"ViewCollectionCell";
 {
     if (section == 0) {
         
-        return array0.count;
+        return array.count;
     }
     else if(section == 1)
     {
@@ -216,6 +243,11 @@ static NSString *identifier = @"ViewCollectionCell";
     {
         return array4.count;
     }
+    else if(section == 5)
+    {
+        return array5.count;
+    }
+
     else
     {
         return 0;
@@ -227,10 +259,9 @@ static NSString *identifier = @"ViewCollectionCell";
 {
     ViewCollectionCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     cell.label.text=[NSString stringWithFormat:@"%ld",indexPath.section*100+indexPath.row];
-
     if (indexPath.section == 0) {
 
-             cell.label.text = array0[indexPath.row];
+             cell.label.text = array[indexPath.row];
     }
     else if(indexPath.section == 1)
     {
@@ -249,6 +280,10 @@ static NSString *identifier = @"ViewCollectionCell";
     else if(indexPath.section == 4)
     {
         cell.label.text = array4[indexPath.row];
+    }
+    else if(indexPath.section == 5)
+    {
+        cell.label.text = array5[indexPath.row];
     }
     return cell;
 }
@@ -334,5 +369,13 @@ static NSString *identifier = @"ViewCollectionCell";
         PopViewController *gra = [PopViewController new];
         [self.navigationController pushViewController:gra animated:YES];
     }
+    
+    /*手势*/
+    else if (indexPath.section == 5)
+    {
+        GestureVC *gra = [GestureVC new];
+        [self.navigationController pushViewController:gra animated:YES];
+    }
+
 }
 @end

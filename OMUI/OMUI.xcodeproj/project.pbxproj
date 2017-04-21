@@ -51,6 +51,8 @@
 		A75FD9591E9C64F800D85FA5 /* PickTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = A75FD9581E9C64F800D85FA5 /* PickTimeView.m */; };
 		A75FD95C1E9CD82400D85FA5 /* OMPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = A75FD95B1E9CD82400D85FA5 /* OMPopoverController.m */; };
 		A7795A231E8DE9F000D19BEB /* UserInterfaceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7795A221E8DE9F000D19BEB /* UserInterfaceVC.m */; };
+		A79B67001EA9AA8B00F4F0FD /* GestureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A79B66FF1EA9AA8B00F4F0FD /* GestureVC.m */; };
+		A79B67041EA9AAE600F4F0FD /* KMGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A79B67031EA9AAE600F4F0FD /* KMGestureRecognizer.m */; };
 		A7E53DE91E8FA4CA0099ABC6 /* DetailUIVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E53DE81E8FA4CA0099ABC6 /* DetailUIVC.m */; };
 /* End PBXBuildFile section */
 
@@ -147,6 +149,10 @@
 		A75FD95B1E9CD82400D85FA5 /* OMPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMPopoverController.m; sourceTree = "<group>"; };
 		A7795A211E8DE9F000D19BEB /* UserInterfaceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInterfaceVC.h; sourceTree = "<group>"; };
 		A7795A221E8DE9F000D19BEB /* UserInterfaceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInterfaceVC.m; sourceTree = "<group>"; };
+		A79B66FE1EA9AA8B00F4F0FD /* GestureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureVC.h; sourceTree = "<group>"; };
+		A79B66FF1EA9AA8B00F4F0FD /* GestureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureVC.m; sourceTree = "<group>"; };
+		A79B67021EA9AAE600F4F0FD /* KMGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMGestureRecognizer.h; sourceTree = "<group>"; };
+		A79B67031EA9AAE600F4F0FD /* KMGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMGestureRecognizer.m; sourceTree = "<group>"; };
 		A7E53DE71E8FA4CA0099ABC6 /* DetailUIVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailUIVC.h; sourceTree = "<group>"; };
 		A7E53DE81E8FA4CA0099ABC6 /* DetailUIVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailUIVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -463,6 +469,7 @@
 				A7416EB51E972EAA00DB503D /* UIScorllViews */,
 				A7416EAE1E972EAA00DB503D /* UICollectionViews */,
 				A7416ED61E976D9000DB503D /* 弹框 */,
+				A79B66FD1EA9AA3500F4F0FD /* 手势 */,
 			);
 			path = UIViewControllers;
 			sourceTree = "<group>";
@@ -476,6 +483,25 @@
 				A7E53DE81E8FA4CA0099ABC6 /* DetailUIVC.m */,
 			);
 			path = "控件";
+			sourceTree = "<group>";
+		};
+		A79B66FD1EA9AA3500F4F0FD /* 手势 */ = {
+			isa = PBXGroup;
+			children = (
+				A79B67011EA9AAE600F4F0FD /* KMGestureRecognizer */,
+				A79B66FE1EA9AA8B00F4F0FD /* GestureVC.h */,
+				A79B66FF1EA9AA8B00F4F0FD /* GestureVC.m */,
+			);
+			path = "手势";
+			sourceTree = "<group>";
+		};
+		A79B67011EA9AAE600F4F0FD /* KMGestureRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				A79B67021EA9AAE600F4F0FD /* KMGestureRecognizer.h */,
+				A79B67031EA9AAE600F4F0FD /* KMGestureRecognizer.m */,
+			);
+			path = KMGestureRecognizer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -561,6 +587,7 @@
 				A73F67A31E8CF5D200C119BE /* ViewController.m in Sources */,
 				A7416EE71E976DB100DB503D /* TanKuangView.m in Sources */,
 				A73F67A01E8CF5D200C119BE /* AppDelegate.m in Sources */,
+				A79B67041EA9AAE600F4F0FD /* KMGestureRecognizer.m in Sources */,
 				A7416ED51E97329000DB503D /* CustomCollectionViewCell.m in Sources */,
 				A7416EC91E972EAA00DB503D /* HorizonalTableViewVC.m in Sources */,
 				A73F67E91E8CFB3800C119BE /* MASViewAttribute.m in Sources */,
@@ -589,6 +616,7 @@
 				A7416EC51E972EAA00DB503D /* HorizonalCollectionCell.m in Sources */,
 				A7416EE51E976DB100DB503D /* FDAlertView.m in Sources */,
 				A7416EE91E976DB100DB503D /* WYStoryboardPopoverSegue.m in Sources */,
+				A79B67001EA9AA8B00F4F0FD /* GestureVC.m in Sources */,
 				A75481761E9B57B2006666C0 /* PopViewController.m in Sources */,
 				A73F67EA1E8CFB3800C119BE /* MASViewConstraint.m in Sources */,
 				A73F67EE1E8CFB3800C119BE /* TTTAttributedLabel.m in Sources */,
