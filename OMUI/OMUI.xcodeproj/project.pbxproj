@@ -53,6 +53,7 @@
 		A7795A231E8DE9F000D19BEB /* UserInterfaceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7795A221E8DE9F000D19BEB /* UserInterfaceVC.m */; };
 		A79B67001EA9AA8B00F4F0FD /* GestureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A79B66FF1EA9AA8B00F4F0FD /* GestureVC.m */; };
 		A79B67041EA9AAE600F4F0FD /* KMGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A79B67031EA9AAE600F4F0FD /* KMGestureRecognizer.m */; };
+		A79B67081EA9D33300F4F0FD /* MCCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A79B67071EA9D33300F4F0FD /* MCCollectionVC.m */; };
 		A7E53DE91E8FA4CA0099ABC6 /* DetailUIVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E53DE81E8FA4CA0099ABC6 /* DetailUIVC.m */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +154,8 @@
 		A79B66FF1EA9AA8B00F4F0FD /* GestureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureVC.m; sourceTree = "<group>"; };
 		A79B67021EA9AAE600F4F0FD /* KMGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMGestureRecognizer.h; sourceTree = "<group>"; };
 		A79B67031EA9AAE600F4F0FD /* KMGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMGestureRecognizer.m; sourceTree = "<group>"; };
+		A79B67061EA9D33300F4F0FD /* MCCollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCollectionVC.h; sourceTree = "<group>"; };
+		A79B67071EA9D33300F4F0FD /* MCCollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCollectionVC.m; sourceTree = "<group>"; };
 		A7E53DE71E8FA4CA0099ABC6 /* DetailUIVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailUIVC.h; sourceTree = "<group>"; };
 		A7E53DE81E8FA4CA0099ABC6 /* DetailUIVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailUIVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -294,6 +297,7 @@
 		A7416EAE1E972EAA00DB503D /* UICollectionViews */ = {
 			isa = PBXGroup;
 			children = (
+				A79B67051EA9D31900F4F0FD /* MCCollectionView */,
 				A7416EAF1E972EAA00DB503D /* 水平的CollectionView */,
 				A7416EB41E972EAA00DB503D /* 自定义Collection有表头 */,
 			);
@@ -504,6 +508,15 @@
 			path = KMGestureRecognizer;
 			sourceTree = "<group>";
 		};
+		A79B67051EA9D31900F4F0FD /* MCCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				A79B67061EA9D33300F4F0FD /* MCCollectionVC.h */,
+				A79B67071EA9D33300F4F0FD /* MCCollectionVC.m */,
+			);
+			path = MCCollectionView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -586,6 +599,7 @@
 				A7416EED1E978D3C00DB503D /* ViewCollectionCell.m in Sources */,
 				A73F67A31E8CF5D200C119BE /* ViewController.m in Sources */,
 				A7416EE71E976DB100DB503D /* TanKuangView.m in Sources */,
+				A79B67081EA9D33300F4F0FD /* MCCollectionVC.m in Sources */,
 				A73F67A01E8CF5D200C119BE /* AppDelegate.m in Sources */,
 				A79B67041EA9AAE600F4F0FD /* KMGestureRecognizer.m in Sources */,
 				A7416ED51E97329000DB503D /* CustomCollectionViewCell.m in Sources */,

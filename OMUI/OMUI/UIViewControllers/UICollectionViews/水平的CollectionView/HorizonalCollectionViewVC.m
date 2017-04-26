@@ -35,7 +35,6 @@ static NSString *identifier = @"HorizonalCollectionCell";
     self.collectionView.dataSource = self;
     self.collectionView.pagingEnabled = YES;
     [self.view addSubview:_collectionView];
-    
     [self.collectionView registerClass:[HorizonalCollectionCell class] forCellWithReuseIdentifier:identifier];
     
     

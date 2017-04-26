@@ -344,7 +344,6 @@ static NSString *identifier = @"ViewCollectionCell";
             ChangeViewScrollVC *gra = [ChangeViewScrollVC new];
             [self.navigationController pushViewController:gra animated:YES];
         }
-
     }
     /*
      UICollectionViews
@@ -355,7 +354,6 @@ static NSString *identifier = @"ViewCollectionCell";
             //水平的UICollectionViews
             HorizonalCollectionViewVC *gra = [HorizonalCollectionViewVC new];
             [self.navigationController pushViewController:gra animated:YES];
-            
         }
         if (indexPath.row ==  1) {
             //自定义Collections 有表头
