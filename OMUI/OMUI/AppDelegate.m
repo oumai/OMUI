@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "LinkageViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -18,7 +19,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
+    
+    //ViewController
+    //LinkageViewController
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[LinkageViewController new]];
     return YES;
 }
 

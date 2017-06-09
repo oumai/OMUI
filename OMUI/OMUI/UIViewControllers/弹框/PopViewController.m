@@ -45,7 +45,7 @@
         make.top.left.bottom.right.equalTo(self.view);
     }];
     self.titleArray = [NSMutableArray array];
-    self.titleArray = @[@"FDAlertView",@"SheetActionView",@"TanKuangView",@"PickTimeView",@"",@"WYPopoverController",@"",@"",@"",@"",@"",@"",@"",@""];
+    self.titleArray = @[@"FDAlertView",@"SheetActionView",@"TanKuangView",@"PickTimeView",@"UIPickerView",@"WYPopoverController",@"",@"",@"",@"",@"",@"",@"",@""];
     
 }
 - (void)viewWillAppear:(BOOL)animated

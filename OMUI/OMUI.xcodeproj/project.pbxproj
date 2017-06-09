@@ -55,6 +55,7 @@
 		A79B67041EA9AAE600F4F0FD /* KMGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A79B67031EA9AAE600F4F0FD /* KMGestureRecognizer.m */; };
 		A79B67081EA9D33300F4F0FD /* MCCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A79B67071EA9D33300F4F0FD /* MCCollectionVC.m */; };
 		A7E53DE91E8FA4CA0099ABC6 /* DetailUIVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E53DE81E8FA4CA0099ABC6 /* DetailUIVC.m */; };
+		ADF54D7A1EEA9463001766EB /* LinkageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF54D791EEA9463001766EB /* LinkageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -158,6 +159,8 @@
 		A79B67071EA9D33300F4F0FD /* MCCollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCollectionVC.m; sourceTree = "<group>"; };
 		A7E53DE71E8FA4CA0099ABC6 /* DetailUIVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailUIVC.h; sourceTree = "<group>"; };
 		A7E53DE81E8FA4CA0099ABC6 /* DetailUIVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailUIVC.m; sourceTree = "<group>"; };
+		ADF54D781EEA9463001766EB /* LinkageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkageViewController.h; sourceTree = "<group>"; };
+		ADF54D791EEA9463001766EB /* LinkageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +206,8 @@
 				A73F679F1E8CF5D200C119BE /* AppDelegate.m */,
 				A73F67A11E8CF5D200C119BE /* ViewController.h */,
 				A73F67A21E8CF5D200C119BE /* ViewController.m */,
+				ADF54D781EEA9463001766EB /* LinkageViewController.h */,
+				ADF54D791EEA9463001766EB /* LinkageViewController.m */,
 				A7416EEA1E978CFF00DB503D /* Views */,
 				A7795A1F1E8DE8C600D19BEB /* UIViewControllers */,
 				A73F67B31E8CFB3800C119BE /* Libs */,
@@ -593,6 +598,7 @@
 				A7416ECE1E97320900DB503D /* CustomCollectionsVC.m in Sources */,
 				A75FD9591E9C64F800D85FA5 /* PickTimeView.m in Sources */,
 				A73F67ED1E8CFB3800C119BE /* View+MASAdditions.m in Sources */,
+				ADF54D7A1EEA9463001766EB /* LinkageViewController.m in Sources */,
 				A73F67DE1E8CFB3800C119BE /* NSAttributedString+ParagraphStyle.m in Sources */,
 				A73F67E11E8CFB3800C119BE /* UIButton+Tool.m in Sources */,
 				A73F67DF1E8CFB3800C119BE /* NSString+SQTool.m in Sources */,

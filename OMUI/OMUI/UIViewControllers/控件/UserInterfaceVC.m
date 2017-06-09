@@ -31,7 +31,6 @@
     
     self.typeui = 1;
     
-    
     if (self.typeui == 0) {
         
         [self ConfigureLabel];
