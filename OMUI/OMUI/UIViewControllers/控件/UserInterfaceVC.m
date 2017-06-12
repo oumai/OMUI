@@ -382,8 +382,8 @@
     [_switchOn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view.mas_centerX).offset(0);
         make.centerY.equalTo(self.view.mas_centerY).offset(0);
-        make.width.equalTo(40);
-        make.height.equalTo(28);
+        make.width.equalTo(51);
+        make.height.equalTo(31);
     }];
     
 }

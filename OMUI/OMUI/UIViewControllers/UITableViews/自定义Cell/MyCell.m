@@ -48,10 +48,10 @@
         
         
         [_cellView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.contentView.mas_top).offset(7);
-            make.left.equalTo(self.contentView.mas_left).offset(7);
-            make.bottom.equalTo(self.contentView.mas_bottom).offset(0);
-            make.right.equalTo(self.contentView.mas_right).offset(-7);
+            make.top.equalTo(self.cellView.mas_top).offset(7);
+            make.left.equalTo(self.cellView.mas_left).offset(7);
+            make.bottom.equalTo(self.cellView.mas_bottom).offset(0);
+            make.right.equalTo(self.cellView.mas_right).offset(-7);
             
         }];
         
@@ -60,10 +60,11 @@
         self.label.font = [UIFont systemFontOfSize:14];
         self.label.textColor = KHexColor(@"#999999");
         self.label.text = @"label";
-        [self.contentView addSubview:_label];
+        [self.cellView addSubview:_label];
+        
         [_label mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.contentView.mas_top).offset(10);
-            make.left.equalTo(self.contentView.mas_left).offset(10);
+            make.top.equalTo(self.cellView.mas_top).offset(10);
+            make.left.equalTo(self.cellView.mas_left).offset(10);
             make.width.equalTo(self.label.mas_width);
             make.height.equalTo(14);
             make.width.equalTo(100);
@@ -74,11 +75,11 @@
         self.textField.textColor = KHexColor(@"ff0000");
         self.textField.placeholder = @"textField";
         self.textField.borderStyle = UITextBorderStyleRoundedRect;
-        [self.contentView addSubview:_textField];
+        [self.cellView addSubview:_textField];
         
         [_textField mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.label.mas_bottom).offset(20);
-            make.left.equalTo(self.contentView.mas_left).offset(10);
+            make.left.equalTo(self.cellView.mas_left).offset(10);
             make.width.equalTo(100);
             make.height.equalTo(30);
         }];
@@ -90,11 +91,11 @@
         self.iconImage.layer.masksToBounds = YES;
         self.iconImage.layer.borderWidth = 0.5;
         self.iconImage.layer.borderColor = KHexColor(@"#ff00000").CGColor;
-        [self.contentView addSubview:_iconImage];
+        [self.cellView addSubview:_iconImage];
         
         [_iconImage mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.contentView.mas_top).offset(15);
-            make.right.equalTo(self.contentView.mas_right).offset(-20);
+            make.top.equalTo(self.cellView.mas_top).offset(15);
+            make.right.equalTo(self.cellView.mas_right).offset(-20);
             make.width.equalTo(50);
             make.height.equalTo(50);
         }];
