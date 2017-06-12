@@ -25,7 +25,7 @@
  */
 #import "MyViewController.h"    //我的Cell
 #import "HorizonalTableViewVC.h"//水平滑动的UITableView
-
+#import "LinkageVC.h"           //联动效果
 
 /*
  UIScrollView
@@ -84,7 +84,7 @@
                             @"title":@[@"UserInterfaceVC",@"DetailUIVC",@"cc",@"dd",@"ee",@"ff"]},
                           
                           @{@"header":@"UITableViews",
-                            @"title":@[@"MyViewController",@"水平滑动的UITableView",@"nn",@"oo",@"pp",@"qq"]},
+                            @"title":@[@"MyViewController",@"水平滑动的UITableView",@"LinkageVC",@"oo",@"pp",@"qq"]},
                           
                           @{@"header":@"UIScrollView",
                             @"title":@[@"GradientVC",@"ChangeViewScrollVC",@"jj",@"xx",@"yy",@"zz"]},
@@ -207,97 +207,141 @@
     }
 }
 
-//联动效果在于这里
-- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
-{
-    if(tableView == _rightTableView){
-        [_leftTableView selectRowAtIndexPath:[NSIndexPath indexPathForItem:section inSection:0] animated:YES scrollPosition:UITableViewScrollPositionNone];
-    }
-}
+/*
+ 联动效果在于这里
+ 这个方法不准确
+ */
+//- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
+//{
+//    if(tableView == _rightTableView){
+//        [_leftTableView selectRowAtIndexPath:[NSIndexPath indexPathForItem:section inSection:0] animated:YES scrollPosition:UITableViewScrollPositionNone];
+//    }
+//}
 
+
+//MARK: - 一个方法就能搞定 右边滑动时跟左边的联动
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    // 如果是 左侧的 tableView 直接return
+    if (scrollView == _leftTableView) return;
+    
+    // 取出显示在 视图 且最靠上 的 cell 的 indexPath
+    NSIndexPath *topHeaderViewIndexpath = [[_rightTableView indexPathsForVisibleRows] firstObject];
+    
+    // 左侧 talbelView 移动的 indexPath
+    NSIndexPath *moveToIndexpath = [NSIndexPath indexPathForRow:topHeaderViewIndexpath.section inSection:0];
+    
+    // 移动 左侧 tableView 到 指定 indexPath 居中显示
+    [_leftTableView selectRowAtIndexPath:moveToIndexpath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+    
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    /*所有控件*/
-    if (indexPath.section == 0) {
-        if (indexPath.row == 0)
+    
+    
+    
+    if (_rightTableView == tableView) {
+        /*所有控件*/
+        if (indexPath.section == 0) {
+            if (indexPath.row == 0)
+            {
+                //所有控件
+                UserInterfaceVC *bas = [UserInterfaceVC new];
+                [self.navigationController pushViewController:bas animated:YES];
+            }
+            else if (indexPath.row == 1) {
+                //所有控件详情"
+                DetailUIVC *bas = [DetailUIVC new];
+                [self.navigationController pushViewController:bas animated:YES];
+            }
+            
+        }
+        /*
+         UITableViews
+         */
+        else if (indexPath.section == 1)
         {
-            //所有控件
-            UserInterfaceVC *bas = [UserInterfaceVC new];
-            [self.navigationController pushViewController:bas animated:YES];
-        }
-        else if (indexPath.row == 1) {
-            //所有控件详情"
-            DetailUIVC *bas = [DetailUIVC new];
-            [self.navigationController pushViewController:bas animated:YES];
-        }
-        
-    }
-    /*
-     UITableViews
-     */
-    else if (indexPath.section == 1)
-    {
-        if (indexPath.row == 0) {
-            //自定义Cell
-            MyViewController *bas = [MyViewController new];
-            [self.navigationController pushViewController:bas animated:YES];
-        }
-        if (indexPath.row == 1) {
-            
-            //横向滑动的UITableView
-            HorizonalTableViewVC *vc = [HorizonalTableViewVC new];
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-        
-    }
-    /*
-     UIScrollViews
-     */
-    
-    else if (indexPath.section == 2)
-    {
-        if (indexPath.row == 0) {
-            
-            //渐变
-            GradientVC *gra = [GradientVC new];
-            [self.navigationController pushViewController:gra animated:YES];
-        }
-        if (indexPath.row == 1) {
-            //左右切换UIScroll
-            ChangeViewScrollVC *gra = [ChangeViewScrollVC new];
-            [self.navigationController pushViewController:gra animated:YES];
-        }
-    }
-    /*
-     UICollectionViews
-     */
-    else if (indexPath.section == 3)
-    {
-        if (indexPath.row == 0) {
-            //水平的UICollectionViews
-            HorizonalCollectionViewVC *gra = [HorizonalCollectionViewVC new];
-            [self.navigationController pushViewController:gra animated:YES];
-        }
-        if (indexPath.row ==  1) {
-            //自定义Collections 有表头
-            CustomCollectionsVC *gra = [CustomCollectionsVC new];
-            [self.navigationController pushViewController:gra animated:YES];
-        }
-    }
-    /*弹框*/
-    else if (indexPath.section == 4)
-    {
-        PopViewController *gra = [PopViewController new];
-        [self.navigationController pushViewController:gra animated:YES];
-    }
-    
-    /*手势*/
-    else if (indexPath.section == 5)
-    {
-        GestureVC *gra = [GestureVC new];
-        [self.navigationController pushViewController:gra animated:YES];
-    }
+            if (indexPath.row == 0) {
+                //自定义Cell
+                MyViewController *bas = [MyViewController new];
+                [self.navigationController pushViewController:bas animated:YES];
+            }
+            if (indexPath.row == 1) {
+                
+                //横向滑动的UITableView
+                HorizonalTableViewVC *vc = [HorizonalTableViewVC new];
+                [self.navigationController pushViewController:vc animated:YES];
+            }
+            if (indexPath.row == 2) {
+                //联动效果
+                LinkageVC *vc = [LinkageVC new];
+                [self.navigationController pushViewController:vc animated:YES];
 
+            }
+            
+        }
+        /*
+         UIScrollViews
+         */
+        
+        else if (indexPath.section == 2)
+        {
+            if (indexPath.row == 0) {
+                
+                //渐变
+                GradientVC *gra = [GradientVC new];
+                [self.navigationController pushViewController:gra animated:YES];
+            }
+            if (indexPath.row == 1) {
+                //左右切换UIScroll
+                ChangeViewScrollVC *gra = [ChangeViewScrollVC new];
+                [self.navigationController pushViewController:gra animated:YES];
+            }
+        }
+        /*
+         UICollectionViews
+         */
+        else if (indexPath.section == 3)
+        {
+            if (indexPath.row == 0) {
+                //水平的UICollectionViews
+                HorizonalCollectionViewVC *gra = [HorizonalCollectionViewVC new];
+                [self.navigationController pushViewController:gra animated:YES];
+            }
+            if (indexPath.row ==  1) {
+                //自定义Collections 有表头
+                CustomCollectionsVC *gra = [CustomCollectionsVC new];
+                [self.navigationController pushViewController:gra animated:YES];
+            }
+        }
+        /*弹框*/
+        else if (indexPath.section == 4)
+        {
+            PopViewController *gra = [PopViewController new];
+            [self.navigationController pushViewController:gra animated:YES];
+        }
+        
+        /*手势*/
+        else if (indexPath.section == 5)
+        {
+            GestureVC *gra = [GestureVC new];
+            [self.navigationController pushViewController:gra animated:YES];
+        }
+
+    }
+    else
+    {
+        
+        //计算出右侧tableView将要滚动的位置
+        NSIndexPath *moveToIndexPath = [NSIndexPath indexPathForRow:0 inSection:indexPath.row];
+        //将右侧tableView移动到指定位置
+        [_rightTableView selectRowAtIndexPath:moveToIndexPath animated:YES scrollPosition:UITableViewScrollPositionTop];
+        //取消选中效果
+        [_rightTableView deselectRowAtIndexPath:moveToIndexPath animated:YES];
+        
+    }
+   
 }
+
 @end

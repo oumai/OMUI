@@ -55,6 +55,7 @@
 		A79B67041EA9AAE600F4F0FD /* KMGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A79B67031EA9AAE600F4F0FD /* KMGestureRecognizer.m */; };
 		A79B67081EA9D33300F4F0FD /* MCCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A79B67071EA9D33300F4F0FD /* MCCollectionVC.m */; };
 		A7E53DE91E8FA4CA0099ABC6 /* DetailUIVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E53DE81E8FA4CA0099ABC6 /* DetailUIVC.m */; };
+		AD6C3A991EEE3C3800C9F94E /* LinkageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6C3A981EEE3C3800C9F94E /* LinkageVC.m */; };
 		ADF54D7A1EEA9463001766EB /* LinkageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF54D791EEA9463001766EB /* LinkageViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -159,6 +160,8 @@
 		A79B67071EA9D33300F4F0FD /* MCCollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCollectionVC.m; sourceTree = "<group>"; };
 		A7E53DE71E8FA4CA0099ABC6 /* DetailUIVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailUIVC.h; sourceTree = "<group>"; };
 		A7E53DE81E8FA4CA0099ABC6 /* DetailUIVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailUIVC.m; sourceTree = "<group>"; };
+		AD6C3A971EEE3C3800C9F94E /* LinkageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkageVC.h; sourceTree = "<group>"; };
+		AD6C3A981EEE3C3800C9F94E /* LinkageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkageVC.m; sourceTree = "<group>"; };
 		ADF54D781EEA9463001766EB /* LinkageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkageViewController.h; sourceTree = "<group>"; };
 		ADF54D791EEA9463001766EB /* LinkageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -362,6 +365,7 @@
 			children = (
 				A7416EBD1E972EAA00DB503D /* 水平滑动的UITabelVeiew */,
 				A7416EC01E972EAA00DB503D /* 自定义Cell */,
+				AD6C3A961EEE3C1D00C9F94E /* 联动UITableVeiw */,
 			);
 			path = UITableViews;
 			sourceTree = "<group>";
@@ -522,6 +526,15 @@
 			path = MCCollectionView;
 			sourceTree = "<group>";
 		};
+		AD6C3A961EEE3C1D00C9F94E /* 联动UITableVeiw */ = {
+			isa = PBXGroup;
+			children = (
+				AD6C3A971EEE3C3800C9F94E /* LinkageVC.h */,
+				AD6C3A981EEE3C3800C9F94E /* LinkageVC.m */,
+			);
+			path = "联动UITableVeiw";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -620,6 +633,7 @@
 				A714F9A71E9DCC4C007849EE /* UIPickerViewController.m in Sources */,
 				A7416ECA1E972EAA00DB503D /* MyCell.m in Sources */,
 				A7416EC71E972EAA00DB503D /* ChangeViewScrollVC.m in Sources */,
+				AD6C3A991EEE3C3800C9F94E /* LinkageVC.m in Sources */,
 				A73F67E71E8CFB3800C119BE /* MASConstraintMaker.m in Sources */,
 				A75FD95C1E9CD82400D85FA5 /* OMPopoverController.m in Sources */,
 				A7416EC61E972EAA00DB503D /* HorizonalCollectionViewVC.m in Sources */,
