@@ -153,9 +153,10 @@
 - (void)ConfigureView
 {
     self.myView = [UIView new];
-    [self.view addSubview:_iconImage];
+    self.myView.backgroundColor = KHexColor(@"#ebebeb");
+    [self.view addSubview:_myView];
     
-    [_iconImage mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_myView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view.mas_centerX).offset(0);
         make.centerY.equalTo(self.view.mas_centerY).offset(0);
         make.width.equalTo(50);

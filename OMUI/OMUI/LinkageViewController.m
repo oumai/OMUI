@@ -5,6 +5,12 @@
 //  Created by MichaeOu on 2017/6/9.
 //  Copyright © 2017年 康美. All rights reserved.
 //
+
+#pragma mark -------------------------------------------------------------------------------------------------Click------------------------------------------------------------
+#pragma mark -------------------------------------------------------------------------------------------------DataSource、Delegate------------------------------------------------------------
+#pragma mark -------------------------------------------------------------------------------------------------ConfigureUI------------------------------------------------------------
+
+
 #define  LeftTableViewWidth 150
 #define  LeftTableViewHeight self.view.frame.size.height
 #define  RightTableViewWidth (self.view.frame.size.width - LeftTableViewWidth)
@@ -14,6 +20,7 @@
 
 
 /*
+ ①
  所有控件
  */
 #import "UserInterfaceVC.h"  //所有控件
@@ -21,13 +28,15 @@
 
 
 /*
+ ②
  UITableViews
  */
 #import "MyViewController.h"    //我的Cell
 #import "HorizonalTableViewVC.h"//水平滑动的UITableView
 #import "LinkageVC.h"           //联动效果
-
+#import "SettingViewController.h"//设置界面
 /*
+ ③
  UIScrollView
  */
 #import "GradientVC.h"
@@ -35,6 +44,7 @@
 
 
 /*
+ ④
  UICollectionViews
  */
 #import "HorizonalCollectionViewVC.h" //水平的滑动
@@ -42,6 +52,7 @@
 #import "HeaderCollectionReusableView.h"
 
 /*
+ ⑤
  弹框
  */
 #import "PopViewController.h"
@@ -52,10 +63,17 @@
 
 
 /*
+ ⑥
  手势
  */
 #import "GestureVC.h"
 
+
+/*
+ ⑦
+ 渐变
+ */
+#import "GradientViewController.h"
 @interface LinkageViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     UITableView *_rightTableView;
@@ -77,6 +95,7 @@
                          @"UICollectionViews",
                          @"弹框",
                          @"手势",
+                         @"渐变"
                          ];
     
     
@@ -84,7 +103,7 @@
                             @"title":@[@"UserInterfaceVC",@"DetailUIVC",@"cc",@"dd",@"ee",@"ff"]},
                           
                           @{@"header":@"UITableViews",
-                            @"title":@[@"MyViewController",@"水平滑动的UITableView",@"LinkageVC",@"oo",@"pp",@"qq"]},
+                            @"title":@[@"MyViewController",@"水平滑动的UITableView",@"LinkageVC",@"Setting",@"pp",@"qq"]},
                           
                           @{@"header":@"UIScrollView",
                             @"title":@[@"GradientVC",@"ChangeViewScrollVC",@"jj",@"xx",@"yy",@"zz"]},
@@ -96,7 +115,12 @@
                             @"title":@[@"PopViewController",@"TanKuangView",@"SheetActionView",@"FDAlertView",@"WYPopoverController",@"qq"]},
                           
                           @{@"header":@"手势",
-                            @"title":@[@"GestureVC",@"ss",@"jj",@"xx",@"yy",@"zz"]}];
+                            @"title":@[@"GestureVC",@"ss",@"jj",@"xx",@"yy",@"zz"]},
+                          
+                          @{@"header":@"渐变",
+                            @"title":@[@"GradientViewController",@"ss",@"jj",@"xx",@"yy",@"zz"]}
+                          
+                          ];
     
     
     
@@ -279,6 +303,12 @@
                 [self.navigationController pushViewController:vc animated:YES];
 
             }
+            else if (indexPath.row == 3)
+            {
+                //设置界面
+                SettingViewController *vc = [SettingViewController new];
+                [self.navigationController pushViewController:vc animated:YES];
+            }
             
         }
         /*
@@ -328,11 +358,19 @@
             GestureVC *gra = [GestureVC new];
             [self.navigationController pushViewController:gra animated:YES];
         }
+        /*渐变*/
+        
+        else if (indexPath.section == 6)
+        {
+            
+            GradientViewController *gra = [GradientViewController new];
+            [self.navigationController pushViewController:gra animated:YES];
+
+        }
 
     }
     else
     {
-        
         //计算出右侧tableView将要滚动的位置
         NSIndexPath *moveToIndexPath = [NSIndexPath indexPathForRow:0 inSection:indexPath.row];
         //将右侧tableView移动到指定位置

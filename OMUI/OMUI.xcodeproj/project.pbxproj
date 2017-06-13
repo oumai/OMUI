@@ -35,7 +35,6 @@
 		A7416EC61E972EAA00DB503D /* HorizonalCollectionViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7416EB31E972EAA00DB503D /* HorizonalCollectionViewVC.m */; };
 		A7416EC71E972EAA00DB503D /* ChangeViewScrollVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7416EB81E972EAA00DB503D /* ChangeViewScrollVC.m */; };
 		A7416EC81E972EAA00DB503D /* GradientVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7416EBB1E972EAA00DB503D /* GradientVC.m */; };
-		A7416EC91E972EAA00DB503D /* HorizonalTableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7416EBF1E972EAA00DB503D /* HorizonalTableViewVC.m */; };
 		A7416ECA1E972EAA00DB503D /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7416EC21E972EAA00DB503D /* MyCell.m */; };
 		A7416ECB1E972EAA00DB503D /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7416EC41E972EAA00DB503D /* MyViewController.m */; };
 		A7416ECE1E97320900DB503D /* CustomCollectionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7416ECD1E97320900DB503D /* CustomCollectionsVC.m */; };
@@ -55,7 +54,14 @@
 		A79B67041EA9AAE600F4F0FD /* KMGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A79B67031EA9AAE600F4F0FD /* KMGestureRecognizer.m */; };
 		A79B67081EA9D33300F4F0FD /* MCCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A79B67071EA9D33300F4F0FD /* MCCollectionVC.m */; };
 		A7E53DE91E8FA4CA0099ABC6 /* DetailUIVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E53DE81E8FA4CA0099ABC6 /* DetailUIVC.m */; };
-		AD6C3A991EEE3C3800C9F94E /* LinkageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6C3A981EEE3C3800C9F94E /* LinkageVC.m */; };
+		AD22D6FB1EEFC97700B13AAE /* GradientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD22D6FA1EEFC97700B13AAE /* GradientViewController.m */; };
+		AD22D7011EEFCA0B00B13AAE /* BATCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD22D6FE1EEFCA0B00B13AAE /* BATCustomButton.m */; };
+		AD22D7021EEFCA0B00B13AAE /* BATGraditorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD22D7001EEFCA0B00B13AAE /* BATGraditorButton.m */; };
+		AD22D70A1EEFD48400B13AAE /* LinkageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD22D7061EEFD48400B13AAE /* LinkageVC.m */; };
+		AD22D70B1EEFD48400B13AAE /* HorizonalTableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD22D7091EEFD48400B13AAE /* HorizonalTableViewVC.m */; };
+		AD22D70E1EEFD60900B13AAE /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD22D70D1EEFD60900B13AAE /* SettingViewController.m */; };
+		AD22D7131EEFD71E00B13AAE /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD22D7121EEFD71E00B13AAE /* SettingCell.m */; };
+		AD22D7161EEFD73900B13AAE /* SettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD22D7151EEFD73900B13AAE /* SettingModel.m */; };
 		ADF54D7A1EEA9463001766EB /* LinkageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF54D791EEA9463001766EB /* LinkageViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -120,8 +126,6 @@
 		A7416EB81E972EAA00DB503D /* ChangeViewScrollVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeViewScrollVC.m; sourceTree = "<group>"; };
 		A7416EBA1E972EAA00DB503D /* GradientVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientVC.h; sourceTree = "<group>"; };
 		A7416EBB1E972EAA00DB503D /* GradientVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientVC.m; sourceTree = "<group>"; };
-		A7416EBE1E972EAA00DB503D /* HorizonalTableViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizonalTableViewVC.h; sourceTree = "<group>"; };
-		A7416EBF1E972EAA00DB503D /* HorizonalTableViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizonalTableViewVC.m; sourceTree = "<group>"; };
 		A7416EC11E972EAA00DB503D /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
 		A7416EC21E972EAA00DB503D /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
 		A7416EC31E972EAA00DB503D /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
@@ -160,8 +164,22 @@
 		A79B67071EA9D33300F4F0FD /* MCCollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCollectionVC.m; sourceTree = "<group>"; };
 		A7E53DE71E8FA4CA0099ABC6 /* DetailUIVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailUIVC.h; sourceTree = "<group>"; };
 		A7E53DE81E8FA4CA0099ABC6 /* DetailUIVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailUIVC.m; sourceTree = "<group>"; };
-		AD6C3A971EEE3C3800C9F94E /* LinkageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkageVC.h; sourceTree = "<group>"; };
-		AD6C3A981EEE3C3800C9F94E /* LinkageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkageVC.m; sourceTree = "<group>"; };
+		AD22D6F91EEFC97700B13AAE /* GradientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientViewController.h; sourceTree = "<group>"; };
+		AD22D6FA1EEFC97700B13AAE /* GradientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientViewController.m; sourceTree = "<group>"; };
+		AD22D6FD1EEFCA0B00B13AAE /* BATCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATCustomButton.h; sourceTree = "<group>"; };
+		AD22D6FE1EEFCA0B00B13AAE /* BATCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATCustomButton.m; sourceTree = "<group>"; };
+		AD22D6FF1EEFCA0B00B13AAE /* BATGraditorButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATGraditorButton.h; sourceTree = "<group>"; };
+		AD22D7001EEFCA0B00B13AAE /* BATGraditorButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATGraditorButton.m; sourceTree = "<group>"; };
+		AD22D7051EEFD48400B13AAE /* LinkageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkageVC.h; sourceTree = "<group>"; };
+		AD22D7061EEFD48400B13AAE /* LinkageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkageVC.m; sourceTree = "<group>"; };
+		AD22D7081EEFD48400B13AAE /* HorizonalTableViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizonalTableViewVC.h; sourceTree = "<group>"; };
+		AD22D7091EEFD48400B13AAE /* HorizonalTableViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizonalTableViewVC.m; sourceTree = "<group>"; };
+		AD22D70C1EEFD60900B13AAE /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		AD22D70D1EEFD60900B13AAE /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		AD22D7111EEFD71E00B13AAE /* SettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingCell.h; sourceTree = "<group>"; };
+		AD22D7121EEFD71E00B13AAE /* SettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingCell.m; sourceTree = "<group>"; };
+		AD22D7141EEFD73900B13AAE /* SettingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingModel.h; sourceTree = "<group>"; };
+		AD22D7151EEFD73900B13AAE /* SettingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingModel.m; sourceTree = "<group>"; };
 		ADF54D781EEA9463001766EB /* LinkageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkageViewController.h; sourceTree = "<group>"; };
 		ADF54D791EEA9463001766EB /* LinkageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -363,20 +381,12 @@
 		A7416EBC1E972EAA00DB503D /* UITableViews */ = {
 			isa = PBXGroup;
 			children = (
-				A7416EBD1E972EAA00DB503D /* 水平滑动的UITabelVeiew */,
+				AD22D7031EEFD48400B13AAE /* 个人资料 */,
+				AD22D7041EEFD48400B13AAE /* 联动 */,
+				AD22D7071EEFD48400B13AAE /* 水平滑动 */,
 				A7416EC01E972EAA00DB503D /* 自定义Cell */,
-				AD6C3A961EEE3C1D00C9F94E /* 联动UITableVeiw */,
 			);
 			path = UITableViews;
-			sourceTree = "<group>";
-		};
-		A7416EBD1E972EAA00DB503D /* 水平滑动的UITabelVeiew */ = {
-			isa = PBXGroup;
-			children = (
-				A7416EBE1E972EAA00DB503D /* HorizonalTableViewVC.h */,
-				A7416EBF1E972EAA00DB503D /* HorizonalTableViewVC.m */,
-			);
-			path = "水平滑动的UITabelVeiew";
 			sourceTree = "<group>";
 		};
 		A7416EC01E972EAA00DB503D /* 自定义Cell */ = {
@@ -483,6 +493,7 @@
 				A7416EAE1E972EAA00DB503D /* UICollectionViews */,
 				A7416ED61E976D9000DB503D /* 弹框 */,
 				A79B66FD1EA9AA3500F4F0FD /* 手势 */,
+				AD22D6F81EEFC94400B13AAE /* 渐变 */,
 			);
 			path = UIViewControllers;
 			sourceTree = "<group>";
@@ -526,13 +537,72 @@
 			path = MCCollectionView;
 			sourceTree = "<group>";
 		};
-		AD6C3A961EEE3C1D00C9F94E /* 联动UITableVeiw */ = {
+		AD22D6F81EEFC94400B13AAE /* 渐变 */ = {
 			isa = PBXGroup;
 			children = (
-				AD6C3A971EEE3C3800C9F94E /* LinkageVC.h */,
-				AD6C3A981EEE3C3800C9F94E /* LinkageVC.m */,
+				AD22D6FC1EEFC9DB00B13AAE /* GradientButton */,
+				AD22D6F91EEFC97700B13AAE /* GradientViewController.h */,
+				AD22D6FA1EEFC97700B13AAE /* GradientViewController.m */,
 			);
-			path = "联动UITableVeiw";
+			path = "渐变";
+			sourceTree = "<group>";
+		};
+		AD22D6FC1EEFC9DB00B13AAE /* GradientButton */ = {
+			isa = PBXGroup;
+			children = (
+				AD22D6FD1EEFCA0B00B13AAE /* BATCustomButton.h */,
+				AD22D6FE1EEFCA0B00B13AAE /* BATCustomButton.m */,
+				AD22D6FF1EEFCA0B00B13AAE /* BATGraditorButton.h */,
+				AD22D7001EEFCA0B00B13AAE /* BATGraditorButton.m */,
+			);
+			path = GradientButton;
+			sourceTree = "<group>";
+		};
+		AD22D7031EEFD48400B13AAE /* 个人资料 */ = {
+			isa = PBXGroup;
+			children = (
+				AD22D70C1EEFD60900B13AAE /* SettingViewController.h */,
+				AD22D70D1EEFD60900B13AAE /* SettingViewController.m */,
+				AD22D70F1EEFD65200B13AAE /* Model */,
+				AD22D7101EEFD65200B13AAE /* View */,
+			);
+			path = "个人资料";
+			sourceTree = "<group>";
+		};
+		AD22D7041EEFD48400B13AAE /* 联动 */ = {
+			isa = PBXGroup;
+			children = (
+				AD22D7051EEFD48400B13AAE /* LinkageVC.h */,
+				AD22D7061EEFD48400B13AAE /* LinkageVC.m */,
+			);
+			path = "联动";
+			sourceTree = "<group>";
+		};
+		AD22D7071EEFD48400B13AAE /* 水平滑动 */ = {
+			isa = PBXGroup;
+			children = (
+				AD22D7081EEFD48400B13AAE /* HorizonalTableViewVC.h */,
+				AD22D7091EEFD48400B13AAE /* HorizonalTableViewVC.m */,
+			);
+			path = "水平滑动";
+			sourceTree = "<group>";
+		};
+		AD22D70F1EEFD65200B13AAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD22D7141EEFD73900B13AAE /* SettingModel.h */,
+				AD22D7151EEFD73900B13AAE /* SettingModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AD22D7101EEFD65200B13AAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD22D7111EEFD71E00B13AAE /* SettingCell.h */,
+				AD22D7121EEFD71E00B13AAE /* SettingCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -607,14 +677,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD22D6FB1EEFC97700B13AAE /* GradientViewController.m in Sources */,
 				A7416EC81E972EAA00DB503D /* GradientVC.m in Sources */,
+				AD22D70E1EEFD60900B13AAE /* SettingViewController.m in Sources */,
 				A7416ECE1E97320900DB503D /* CustomCollectionsVC.m in Sources */,
+				AD22D7161EEFD73900B13AAE /* SettingModel.m in Sources */,
+				AD22D70B1EEFD48400B13AAE /* HorizonalTableViewVC.m in Sources */,
 				A75FD9591E9C64F800D85FA5 /* PickTimeView.m in Sources */,
 				A73F67ED1E8CFB3800C119BE /* View+MASAdditions.m in Sources */,
 				ADF54D7A1EEA9463001766EB /* LinkageViewController.m in Sources */,
 				A73F67DE1E8CFB3800C119BE /* NSAttributedString+ParagraphStyle.m in Sources */,
 				A73F67E11E8CFB3800C119BE /* UIButton+Tool.m in Sources */,
+				AD22D7131EEFD71E00B13AAE /* SettingCell.m in Sources */,
 				A73F67DF1E8CFB3800C119BE /* NSString+SQTool.m in Sources */,
+				AD22D7011EEFCA0B00B13AAE /* BATCustomButton.m in Sources */,
 				A7416EED1E978D3C00DB503D /* ViewCollectionCell.m in Sources */,
 				A73F67A31E8CF5D200C119BE /* ViewController.m in Sources */,
 				A7416EE71E976DB100DB503D /* TanKuangView.m in Sources */,
@@ -622,7 +698,6 @@
 				A73F67A01E8CF5D200C119BE /* AppDelegate.m in Sources */,
 				A79B67041EA9AAE600F4F0FD /* KMGestureRecognizer.m in Sources */,
 				A7416ED51E97329000DB503D /* CustomCollectionViewCell.m in Sources */,
-				A7416EC91E972EAA00DB503D /* HorizonalTableViewVC.m in Sources */,
 				A73F67E91E8CFB3800C119BE /* MASViewAttribute.m in Sources */,
 				A7E53DE91E8FA4CA0099ABC6 /* DetailUIVC.m in Sources */,
 				A7416EE61E976DB100DB503D /* SheetActionView.m in Sources */,
@@ -630,10 +705,10 @@
 				A7416ECB1E972EAA00DB503D /* MyViewController.m in Sources */,
 				A73F679D1E8CF5D200C119BE /* main.m in Sources */,
 				A73F67E31E8CFB3800C119BE /* UIImage+Tool.m in Sources */,
+				AD22D7021EEFCA0B00B13AAE /* BATGraditorButton.m in Sources */,
 				A714F9A71E9DCC4C007849EE /* UIPickerViewController.m in Sources */,
 				A7416ECA1E972EAA00DB503D /* MyCell.m in Sources */,
 				A7416EC71E972EAA00DB503D /* ChangeViewScrollVC.m in Sources */,
-				AD6C3A991EEE3C3800C9F94E /* LinkageVC.m in Sources */,
 				A73F67E71E8CFB3800C119BE /* MASConstraintMaker.m in Sources */,
 				A75FD95C1E9CD82400D85FA5 /* OMPopoverController.m in Sources */,
 				A7416EC61E972EAA00DB503D /* HorizonalCollectionViewVC.m in Sources */,
@@ -642,6 +717,7 @@
 				A7795A231E8DE9F000D19BEB /* UserInterfaceVC.m in Sources */,
 				A73F67EC1E8CFB3800C119BE /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				A73F67E81E8CFB3800C119BE /* MASLayoutConstraint.m in Sources */,
+				AD22D70A1EEFD48400B13AAE /* LinkageVC.m in Sources */,
 				A7416EE81E976DB100DB503D /* WYPopoverController.m in Sources */,
 				A73F67EB1E8CFB3800C119BE /* NSArray+MASAdditions.m in Sources */,
 				A73F67E41E8CFB3800C119BE /* UILabel+Siman.m in Sources */,
