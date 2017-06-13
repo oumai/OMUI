@@ -74,6 +74,14 @@
  渐变
  */
 #import "GradientViewController.h"
+
+
+/*
+ ⑧
+ 其他
+ */
+#import "RadiusViewController.h"
+
 @interface LinkageViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     UITableView *_rightTableView;
@@ -95,7 +103,8 @@
                          @"UICollectionViews",
                          @"弹框",
                          @"手势",
-                         @"渐变"
+                         @"渐变",
+                         @"其他"
                          ];
     
     
@@ -118,7 +127,10 @@
                             @"title":@[@"GestureVC",@"ss",@"jj",@"xx",@"yy",@"zz"]},
                           
                           @{@"header":@"渐变",
-                            @"title":@[@"GradientViewController",@"ss",@"jj",@"xx",@"yy",@"zz"]}
+                            @"title":@[@"GradientViewController",@"ss",@"jj",@"xx",@"yy",@"zz"]},
+                          
+                          @{@"header":@"其他",
+                            @"title":@[@"RdiusViewController",@"ss",@"jj",@"xx",@"yy",@"zz"]}
                           
                           ];
     
@@ -126,6 +138,8 @@
     
     [self setupSomeParamars];
     
+    
+       
 }
 //创建两个tableview
 - (void)setupSomeParamars
@@ -366,6 +380,20 @@
             GradientViewController *gra = [GradientViewController new];
             [self.navigationController pushViewController:gra animated:YES];
 
+        }
+        else if (indexPath.section == 7)
+        {
+
+            if (indexPath.row == 0) {
+                RadiusViewController *gra = [RadiusViewController new];
+                [self.navigationController pushViewController:gra animated:YES];
+            }
+            else if (indexPath.row == 1) {
+                
+            }
+            else if (indexPath.row == 2) {
+                
+            }
         }
 
     }

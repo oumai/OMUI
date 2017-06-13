@@ -62,6 +62,7 @@
 		AD22D70E1EEFD60900B13AAE /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD22D70D1EEFD60900B13AAE /* SettingViewController.m */; };
 		AD22D7131EEFD71E00B13AAE /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD22D7121EEFD71E00B13AAE /* SettingCell.m */; };
 		AD22D7161EEFD73900B13AAE /* SettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD22D7151EEFD73900B13AAE /* SettingModel.m */; };
+		AD22D71B1EEFE9E800B13AAE /* RadiusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD22D71A1EEFE9E800B13AAE /* RadiusViewController.m */; };
 		ADF54D7A1EEA9463001766EB /* LinkageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF54D791EEA9463001766EB /* LinkageViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -180,6 +181,8 @@
 		AD22D7121EEFD71E00B13AAE /* SettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingCell.m; sourceTree = "<group>"; };
 		AD22D7141EEFD73900B13AAE /* SettingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingModel.h; sourceTree = "<group>"; };
 		AD22D7151EEFD73900B13AAE /* SettingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingModel.m; sourceTree = "<group>"; };
+		AD22D7191EEFE9E800B13AAE /* RadiusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadiusViewController.h; sourceTree = "<group>"; };
+		AD22D71A1EEFE9E800B13AAE /* RadiusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadiusViewController.m; sourceTree = "<group>"; };
 		ADF54D781EEA9463001766EB /* LinkageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkageViewController.h; sourceTree = "<group>"; };
 		ADF54D791EEA9463001766EB /* LinkageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -494,6 +497,7 @@
 				A7416ED61E976D9000DB503D /* 弹框 */,
 				A79B66FD1EA9AA3500F4F0FD /* 手势 */,
 				AD22D6F81EEFC94400B13AAE /* 渐变 */,
+				AD22D7171EEFE9BE00B13AAE /* 其他 */,
 			);
 			path = UIViewControllers;
 			sourceTree = "<group>";
@@ -605,6 +609,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		AD22D7171EEFE9BE00B13AAE /* 其他 */ = {
+			isa = PBXGroup;
+			children = (
+				AD22D7181EEFE9BE00B13AAE /* 部分圆角 */,
+			);
+			path = "其他";
+			sourceTree = "<group>";
+		};
+		AD22D7181EEFE9BE00B13AAE /* 部分圆角 */ = {
+			isa = PBXGroup;
+			children = (
+				AD22D7191EEFE9E800B13AAE /* RadiusViewController.h */,
+				AD22D71A1EEFE9E800B13AAE /* RadiusViewController.m */,
+			);
+			path = "部分圆角";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -685,6 +706,7 @@
 				AD22D70B1EEFD48400B13AAE /* HorizonalTableViewVC.m in Sources */,
 				A75FD9591E9C64F800D85FA5 /* PickTimeView.m in Sources */,
 				A73F67ED1E8CFB3800C119BE /* View+MASAdditions.m in Sources */,
+				AD22D71B1EEFE9E800B13AAE /* RadiusViewController.m in Sources */,
 				ADF54D7A1EEA9463001766EB /* LinkageViewController.m in Sources */,
 				A73F67DE1E8CFB3800C119BE /* NSAttributedString+ParagraphStyle.m in Sources */,
 				A73F67E11E8CFB3800C119BE /* UIButton+Tool.m in Sources */,
