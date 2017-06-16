@@ -82,12 +82,14 @@
  */
 #import "RadiusViewController.h"
 
-@interface LinkageViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface LinkageViewController ()<UITableViewDataSource,UITableViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
 {
     UITableView *_rightTableView;
     UITableView *_leftTableView;
     NSArray *_leftTableSource;
     NSArray *_rightTableSource;
+    NSArray *_proTimeList;
+    NSArray *_proTitleList;
 }
 @end
 
@@ -139,8 +141,8 @@
     [self setupSomeParamars];
     
     
-       
-}
+        
+  }
 //创建两个tableview
 - (void)setupSomeParamars
 {
@@ -277,7 +279,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    
+ 
+
     
     if (_rightTableView == tableView) {
         /*所有控件*/

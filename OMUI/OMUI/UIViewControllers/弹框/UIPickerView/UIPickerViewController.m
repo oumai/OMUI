@@ -63,8 +63,8 @@
     self.rowTitleFirst = @"广东省";
     self.rowTitleSecond = @"深圳市";
     [pickerView selectRow:0 inComponent:0 animated:NO];
-    [pickerView selectRow:0 inComponent:1 animated:NO];
-    [pickerView selectRow:3 inComponent:2 animated:NO];
+    [pickerView selectRow:2 inComponent:1 animated:NO];
+    [pickerView selectRow:4 inComponent:2 animated:NO];
     
     // 刷新数据
     [pickerView reloadAllComponents];

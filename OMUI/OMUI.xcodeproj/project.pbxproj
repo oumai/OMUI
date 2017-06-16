@@ -54,6 +54,7 @@
 		A79B67041EA9AAE600F4F0FD /* KMGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A79B67031EA9AAE600F4F0FD /* KMGestureRecognizer.m */; };
 		A79B67081EA9D33300F4F0FD /* MCCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A79B67071EA9D33300F4F0FD /* MCCollectionVC.m */; };
 		A7E53DE91E8FA4CA0099ABC6 /* DetailUIVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E53DE81E8FA4CA0099ABC6 /* DetailUIVC.m */; };
+		AD17D92D1EF2853600163A8F /* OMPickerViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD17D92C1EF2853600163A8F /* OMPickerViewVC.m */; };
 		AD22D6FB1EEFC97700B13AAE /* GradientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD22D6FA1EEFC97700B13AAE /* GradientViewController.m */; };
 		AD22D7011EEFCA0B00B13AAE /* BATCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD22D6FE1EEFCA0B00B13AAE /* BATCustomButton.m */; };
 		AD22D7021EEFCA0B00B13AAE /* BATGraditorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD22D7001EEFCA0B00B13AAE /* BATGraditorButton.m */; };
@@ -165,6 +166,8 @@
 		A79B67071EA9D33300F4F0FD /* MCCollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCollectionVC.m; sourceTree = "<group>"; };
 		A7E53DE71E8FA4CA0099ABC6 /* DetailUIVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailUIVC.h; sourceTree = "<group>"; };
 		A7E53DE81E8FA4CA0099ABC6 /* DetailUIVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailUIVC.m; sourceTree = "<group>"; };
+		AD17D92B1EF2853600163A8F /* OMPickerViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMPickerViewVC.h; sourceTree = "<group>"; };
+		AD17D92C1EF2853600163A8F /* OMPickerViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMPickerViewVC.m; sourceTree = "<group>"; };
 		AD22D6F91EEFC97700B13AAE /* GradientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientViewController.h; sourceTree = "<group>"; };
 		AD22D6FA1EEFC97700B13AAE /* GradientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientViewController.m; sourceTree = "<group>"; };
 		AD22D6FD1EEFCA0B00B13AAE /* BATCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATCustomButton.h; sourceTree = "<group>"; };
@@ -423,6 +426,7 @@
 				A7416EDA1E976DB100DB503D /* SheetActionView */,
 				A7416EDD1E976DB100DB503D /* TanKuangView */,
 				A75FD9561E9C64F800D85FA5 /* PickTimeView */,
+				AD17D92A1EF2851700163A8F /* OMUIPickerView */,
 				A714F9A41E9DCC31007849EE /* UIPickerView */,
 				A7416EE01E976DB100DB503D /* WYPopoverController */,
 			);
@@ -539,6 +543,15 @@
 				A79B67071EA9D33300F4F0FD /* MCCollectionVC.m */,
 			);
 			path = MCCollectionView;
+			sourceTree = "<group>";
+		};
+		AD17D92A1EF2851700163A8F /* OMUIPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				AD17D92B1EF2853600163A8F /* OMPickerViewVC.h */,
+				AD17D92C1EF2853600163A8F /* OMPickerViewVC.m */,
+			);
+			path = OMUIPickerView;
 			sourceTree = "<group>";
 		};
 		AD22D6F81EEFC94400B13AAE /* 渐变 */ = {
@@ -704,6 +717,7 @@
 				A7416ECE1E97320900DB503D /* CustomCollectionsVC.m in Sources */,
 				AD22D7161EEFD73900B13AAE /* SettingModel.m in Sources */,
 				AD22D70B1EEFD48400B13AAE /* HorizonalTableViewVC.m in Sources */,
+				AD17D92D1EF2853600163A8F /* OMPickerViewVC.m in Sources */,
 				A75FD9591E9C64F800D85FA5 /* PickTimeView.m in Sources */,
 				A73F67ED1E8CFB3800C119BE /* View+MASAdditions.m in Sources */,
 				AD22D71B1EEFE9E800B13AAE /* RadiusViewController.m in Sources */,
