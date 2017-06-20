@@ -1134,7 +1134,8 @@ static inline CGSize CTFramesetterSuggestFrameSizeForAttributedStringWithConstra
         });
     }
 
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
+    NSLog(@"%d",__IPHONE_OS_VERSION_MAX_ALLOWED);
+#if __IPHONE_OS_VERSION_MAX_ALLOWED  >= 70000
     if (&NSLinkAttributeName) {
         [self.attributedText enumerateAttribute:NSLinkAttributeName inRange:NSMakeRange(0, self.attributedText.length) options:0 usingBlock:^(id value, __unused NSRange range, __unused BOOL *stop) {
             if (value) {

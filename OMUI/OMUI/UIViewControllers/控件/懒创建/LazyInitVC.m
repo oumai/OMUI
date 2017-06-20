@@ -1,16 +1,14 @@
 //
-//  DetailUIVC.m
+//  LazyInitVC.m
 //  OMUI
 //
-//  Created by Omichael on 2017/4/1.
+//  Created by MichaeOu on 2017/6/19.
 //  Copyright © 2017年 康美. All rights reserved.
 //
-#define LongString @"2016年3月28日，习近平在布拉格拉尼庄园同捷克总统泽曼共同种下一株来自中国的银杏树苗，他们共同为树苗培土、浇水。习近平表示，前人栽树，后人乘凉。银杏树象征友谊长存，寓意中捷友好绵长久远。希望两国始终从战略高度、以长远眼光看待和把握双边关系发展大局，让中捷关系和两国传统友谊像我们共同浇灌的这株树苗一样，不断茁壮成长。"
-//数字和字母
-#define ALPHANUM @"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
-#import "DetailUIVC.h"
 
-@interface DetailUIVC ()<UITextFieldDelegate>
+#import "LazyInitVC.h"
+
+@interface LazyInitVC ()
 
 @property (nonatomic, strong) UILabel               *titleLabel;    //0
 @property (nonatomic, strong) UITextField           *textField;     //1
@@ -24,23 +22,43 @@
 @property (nonatomic, strong) UISwitch              *switchOn;      //9开关
 @end
 
-@implementation DetailUIVC
+@implementation LazyInitVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
     
     self.view.backgroundColor = [UIColor whiteColor];
-    self.typeui = 1;
+    //[self.view addSubview:self.textField];
+    self.typeui = UILabelType;
+    [self configureUI:UILabelType];
+   
+    /*
+     ①全部一起创建
+     ②懒加载的各自创建
+     ③懒加载的详细
+     */
+}
+- (void)configureUI:(NSInteger )type
+{
     
     
     if (self.typeui == 0) {
         
-        [self ConfigureLabel];
         self.title = [NSString stringWithFormat:@"%@",@"Label"];
+        
+        [self.view addSubview:self.titleLabel];
+        
+        [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self.view.mas_centerX).offset(0);
+            make.centerY.equalTo(self.view.mas_centerY).offset(0);
+            make.width.equalTo(self.titleLabel.mas_width);
+            make.height.equalTo(14);
+        }];
+
     }
     else if (self.typeui == 1)
     {
-        [self ConfigureTextField];
         self.title = [NSString stringWithFormat:@"%@",@"TF"];
         
     }
@@ -92,74 +110,31 @@
         self.title = [NSString stringWithFormat:@"%@",@"Switch"];
         
     }
-    /*
-     切圆角
-     self.iconImage.layer.cornerRadius = 25;
-     self.iconImage.layer.masksToBounds = YES;
-     self.iconImage.layer.borderWidth = 0.5;
-     self.iconImage.layer.borderColor = KHexColor(@"#ff00000").CGColor;
-     */
+
     
 }
-#pragma mark -------------------------------------------------------------------------------------------------Label------------------------------------------------------------
-- (void)ConfigureLabel
+
+#pragma mark -------------------------------------------------------------------------------------------------UILabel------------------------------------------------------------
+- (UILabel *)titleLabel
 {
-    self.titleLabel = [UILabel new];
-    self.titleLabel.font = [UIFont systemFontOfSize:14];
-    self.titleLabel.textColor = KHexColor(@"#999999");
-    self.titleLabel.textAlignment = NSTextAlignmentLeft;
-    self.titleLabel.numberOfLines = 10;
-    self.titleLabel.backgroundColor = [UIColor clearColor];
-    self.titleLabel.text = LongString;
-    [self.view addSubview:_titleLabel];
-    
-    
-    [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view.mas_centerX).offset(0);
-        make.centerY.equalTo(self.view.mas_centerY).offset(0);
-        make.width.equalTo(300);
-        make.height.equalTo(200);
-    }];
-    
+    if (!_titleLabel) {
+        _titleLabel = [UILabel new];
+        _titleLabel.font = [UIFont systemFontOfSize:14];
+        _titleLabel.textColor = KHexColor(@"#999999");
+        _titleLabel.textAlignment = NSTextAlignmentLeft;
+        _titleLabel.text = @"titleLabel";
+        
+    }
+    return _titleLabel;
 }
-#pragma mark -------------------------------------------------------------------------------------------------TextField------------------------------------------------------------
-
-- (void)ConfigureTextField
+#pragma mark -------------------------------------------------------------------------------------------------UITextField------------------------------------------------------------
+- (UITextField *)textField
 {
-    
-
-    /**
-     设置键盘样式，比如银行取款密码只需要数字，有的输入邮箱需要@等等
-     
-     UIKeyboardTypeAlphabet和UIKeyboardTypeDefault类似，就是我们平时看到那样，都是字母，然后有个按键可以切换符号
-     UIKeyboardTypeASCIICapable好像和上面差不多
-     UIKeyboardTypeDecimalPad,UIKeyboardTypeNumberPad都是数字，但前者多了一个“小数点”按键
-     UIKeyboardTypeNamePhonePad-貌似正常
-     UIKeyboardTypePhonePad-电话键盘，不仅有数字还有*和#的那种
-     UIKeyboardTypeNumbersAndPunctuation-只有数字和标点符号
-     UIKeyboardTypeTwitter-除了字母还有@和#，这是微博的符号
-     UIKeyboardTypeURL-除字母，还有.com按钮，方便输入
-     UIKeyboardTypeWebSearch-主要区别在于return键变成了GO键
-     注意：如果是最xcode6下的模拟器的话，默认是不调出软键盘的，按CMD+K可以调出，或者在菜单Hardware里地Keyboard里设置
-
-     */
-    
-    
-    //设置键盘外观
-    //UIKeyboardAppearanceDark和UIKeyboardAppearanceAlert都是把键盘背景变成半透明灰色区别不明显
-    //UIKeyboardAppearanceLight貌似和UIKeyboardAppearanceDefault一样，没啥区别
-    
-    
-    
-    self.textField = [UITextField new];
-    self.textField.textColor = KHexColor(@"ff0000");
-    self.textField.placeholder = @"textField";
-    self.textField.secureTextEntry = YES;                        //加密输入
-    self.textField.delegate = self;
-    self.textField.borderStyle = UITextBorderStyleRoundedRect;   //边框样式
-    self.textField.keyboardType = UIKeyboardTypeWebSearch;       //键盘弹出样式
-    self.textField.keyboardAppearance = UIKeyboardAppearanceLight;//设置键盘外观
-    [self.view addSubview:_textField];
+    _textField = [UITextField new];
+    _textField.textColor = KHexColor(@"ff0000");
+    _textField.placeholder = @"textField";
+    _textField.backgroundColor = [UIColor lightGrayColor];
+    _textField.borderStyle = UITextBorderStyleRoundedRect;
     
     [_textField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view.mas_centerX).offset(0);
@@ -167,48 +142,39 @@
         make.width.equalTo(100);
         make.height.equalTo(30);
     }];
+
+    return _textField;
 }
 
+#pragma mark -------------------------------------------------------------------------------------------------UIImageView------------------------------------------------------------
 
-
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+- (UIImageView *)ConfigureUIImageView
 {
-    NSCharacterSet *cs = [[NSCharacterSet characterSetWithCharactersInString:ALPHANUM] invertedSet];
-    NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
-    return [string isEqualToString:filtered];
-}
-#pragma mark -------------------------------------------------------------------------------------------------ImageView------------------------------------------------------------
-
-- (void)ConfigureUIImageView
-{
-    
-    /*
-     UIViewContentModeLeft
-     UIViewContentModeScaleAspectFill
-     UIViewContentModeScaleAspectFit
-     UIViewContentModeScaleToFill
-     */
-    
     self.iconImage = [UIImageView new];
     self.iconImage.image = [UIImage imageNamed:@"contentMode"];
-    self.iconImage.contentMode = UIViewContentModeScaleAspectFill;//自适应。
+    self.iconImage.layer.cornerRadius = 25;
+    self.iconImage.layer.masksToBounds = YES;
+    self.iconImage.layer.borderWidth = 0.5;
+    self.iconImage.layer.borderColor = KHexColor(@"#ff00000").CGColor;
     [self.view addSubview:_iconImage];
     
     [_iconImage mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view.mas_centerX).offset(0);
         make.centerY.equalTo(self.view.mas_centerY).offset(0);
-        make.width.equalTo(CoreWidth/2);
-        make.height.equalTo(CoreHeight/2);
+        make.width.equalTo(50);
+        make.height.equalTo(50);
     }];
+    return _iconImage;
 }
-#pragma mark -------------------------------------------------------------------------------------------------View------------------------------------------------------------
+#pragma mark -------------------------------------------------------------------------------------------------UIView------------------------------------------------------------
 
 - (void)ConfigureView
 {
     self.myView = [UIView new];
-    [self.view addSubview:_iconImage];
+    self.myView.backgroundColor = KHexColor(@"#ebebeb");
+    [self.view addSubview:_myView];
     
-    [_iconImage mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_myView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view.mas_centerX).offset(0);
         make.centerY.equalTo(self.view.mas_centerY).offset(0);
         make.width.equalTo(50);
@@ -219,62 +185,13 @@
 - (void)ConfigureUIButton
 {
     
-    /*
-     能够定义的button类型有以下6种，
-     typedef enum {
-     UIButtonTypeCustom = 0,          自定义风格
-     UIButtonTypeRoundedRect,         圆角矩形
-     UIButtonTypeDetailDisclosure,    蓝色小箭头按钮，主要做详细说明用
-     UIButtonTypeInfoLight,           亮色感叹号
-     UIButtonTypeInfoDark,            暗色感叹号
-     UIButtonTypeContactAdd,          十字加号按钮
-     } UIButtonType;
-
-     */
+    //    self.button.layer.cornerRadius = 10;
+    //    self.button.layer.masksToBounds = YES;
+    //    self.button.layer.borderWidth = 1;
+    //    self.button.layer.borderColor = KHexColor(@"#ff8787").CGColor;
     
-    
-    
-    /* forState: 这个参数的作用是定义按钮的文字或图片在何种状态下才会显现
-    以下是几种状态
-        enum {
-            UIControlStateNormal       = 0,         常规状态显现
-            UIControlStateHighlighted  = 1 << 0,    高亮状态显现
-            UIControlStateDisabled     = 1 << 1,    禁用的状态才会显现
-            UIControlStateSelected     = 1 << 2,    选中状态
-            UIControlStateApplication  = 0x00FF0000, 当应用程序标志时
-            UIControlStateReserved     = 0xFF000000  为内部框架预留，可以不管他
-        };
-    */
-    
-    
-    /*
-     * 默认情况下，当按钮高亮的情况下，图像的颜色会被画深一点，如果这下面的这个属性设置为no，
-     * 那么可以去掉这个功能
-     button1.adjustsImageWhenHighlighted = NO;
-
-     */
-    /*跟上面的情况一样，默认情况下，当按钮禁用的时候，图像会被画得深一点，设置NO可以取消设置
-     
-     button1.adjustsImageWhenDisabled = NO;
-
-     */
-    
-    
-    
-    /* 下面的这个属性设置为yes的状态下，按钮按下会发光
-     
-     button1.showsTouchWhenHighlighted = YES;
-
-     */
-    
-    /* 给button添加事件，事件有很多种，我会单独开一篇博文介绍它们，下面这个时间的意思是
-     按下按钮，并且手指离开屏幕的时候触发这个事件，跟web中的click事件一样。
-     触发了这个事件以后，执行butClick:这个方法，addTarget:self 的意思是说，这个方法在本类中
-     也可以传入其他类的指针*/
     self.button = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter; //标题居中
-    self.button.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);  //距离上左下右
-    self.button.titleLabel.font = [UIFont systemFontOfSize:20];
+    self.button.titleLabel.font = [UIFont systemFontOfSize:14];
     [self.button setTitle:@"button" forState:UIControlStateNormal];
     [self.button setTitleColor:KHexColor(@"#000000") forState:UIControlStateNormal];
     [self.button setBackgroundImage:[UIImage createImageWithColor:KHexColor(@"#ebebeb")] forState:UIControlStateNormal];
@@ -310,23 +227,21 @@
 
 - (void)ConfigureUISegmentControl
 {
-    //方法iOS7不再有效
-    //self.segmentControl.segmentedControlStyle =    UISegmentedControlStyleBezeled;
-    
-    //设置索引的那个不能点击
-    //[self.segmentControl setEnabled:NO forSegmentAtIndex:1];
-
-
-    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor redColor],NSForegroundColorAttributeName,       //选中字体的颜色
-                         [UIFont systemFontOfSize:20], NSFontAttributeName ,                                                //字体大小(选中字体的大小)
-                         [UIColor orangeColor],UITextAttributeTextShadowColor ,nil];                                        //字体边边颜色
-    
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,
+                         [UIFont systemFontOfSize:14], NSFontAttributeName ,
+                         [UIColor blueColor],UITextAttributeTextShadowColor ,nil]; //字体边边颜色
     self.segmentControl = [[UISegmentedControl alloc] initWithItems:@[@"男",@"女",@"老",@"少",@"7"]];
+    //self.segmentControl.segmentedControlStyle = UISegmentedControlStyleBordered;
     self.segmentControl.selectedSegmentIndex = 1;
-    self.segmentControl.tintColor = [UIColor yellowColor];       //边框的颜色、选中颜色、没有选中的字体颜色
-    self.segmentControl.backgroundColor= [UIColor greenColor];   //背景颜色(没有被选中的背景颜色)
+    self.segmentControl.layer.cornerRadius = 10;
+    self.segmentControl.layer.masksToBounds = YES;
+    self.segmentControl.layer.borderWidth = 1;
+    self.segmentControl.layer.borderColor = KHexColor(@"#ff8787").CGColor;
+    self.segmentControl.tintColor = KHexColor(@"#ff8787");      //边框的颜色
+    self.segmentControl.backgroundColor= KHexColor(@"#ffbfc0"); //背景颜色
     [self.segmentControl setTitleTextAttributes:dic forState:UIControlStateSelected];
     [self.segmentControl addTarget:self action:@selector(segmentControlClick:) forControlEvents:UIControlEventValueChanged];
+    //[self.segmentControl setEnabled:NO forSegmentAtIndex:1]; //设置索引的那个不能点击
     [self.view addSubview:_segmentControl];
     
     [_segmentControl mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -337,19 +252,21 @@
     }];
     
     
-    NSArray *array = [NSArray arrayWithObjects:@"家具",@"灯饰",@"建材",@"装饰", nil];
-    UISegmentedControl *segment = [[UISegmentedControl alloc]initWithItems:array];
-    segment.frame = CGRectMake(10, 130, self.view.frame.size.width-20, 30);
-    //添加一个分段(在指定下标下插入,并设置动画效果)
-    UIFont *font = [UIFont systemFontOfSize:12.0f];
-    NSDictionary *atributes = [NSDictionary dictionaryWithObjectsAndKeys:  //字体颜色
-                               font,NSFontAttributeName, nil]; //字体大小
-    [segment setTitleTextAttributes:atributes forState:UIControlStateNormal];
-    //[segment insertSegmentWithTitle:@"五金电料" atIndex:2 animated:NO];
-    //[segment insertSegmentWithImage:[UIImage imageNamed:@""] atIndex:0 animated:YES];
-    //[segment removeSegmentAtIndex:10 animated:YES];
-    //添加到视图
-    [self.view addSubview:segment];
+    //    //先生成存放标题的数据
+    //    NSArray *array = [NSArray arrayWithObjects:@"家具",@"灯饰",@"建材",@"装饰", nil];
+    //    //初始化UISegmentedControl
+    //    UISegmentedControl *segment = [[UISegmentedControl alloc]initWithItems:array];
+    //    segment.frame = CGRectMake(10, 130, self.view.frame.size.width-20, 30);
+    //
+    //    //添加一个分段(在指定下标下插入,并设置动画效果)
+    //    UIFont *font = [UIFont boldSystemFontOfSize:18.0f];
+    //    NSDictionary *atributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor redColor],NSForegroundColorAttributeName,[UIColor blueColor],NSShadowAttributeName,font,NSFontAttributeName, nil];//[NSDictionary dictionaryWithObject:font forKey:NSFontAttributeName]; //字体大小
+    //    [segment setTitleTextAttributes:atributes forState:UIControlStateNormal];
+    //    //[segment insertSegmentWithTitle:@"五金电料" atIndex:2 animated:NO];
+    //    //[segment insertSegmentWithImage:[UIImage imageNamed:@""] atIndex:0 animated:YES];
+    //    //[segment removeSegmentAtIndex:10 animated:YES];
+    //    //添加到视图
+    //    [self.view addSubview:segment];
 }
 
 - (void)segmentControlClick:(UISegmentedControl *)segmentControl
@@ -366,14 +283,30 @@
             break;
     }
     
-   
+//    self.type = segmentControl.selectedSegmentIndex + 100;
+//    
+//    if (self.type == oneCell) {
+//        NSLog(@"one");
+//    }
+//    if (self.type == twoCell) {
+//        NSLog(@"twoCell");
+//    }
+//    if (self.type == threeCell) {
+//        NSLog(@"threeCell");
+//    }
+//    if (self.type == fourCell) {
+//        NSLog(@"fourCell");
+//    }
+//    if (self.type == fiveCell) {
+//        NSLog(@"fiveCell");
+//    }
 }
 #pragma mark -------------------------------------------------------------------------------------------------UISlider------------------------------------------------------------
 - (void)ConfigureUISlider
 {
     self.slider = [UISlider new];
-    self.slider.minimumValue = 0;
-    self.slider.maximumValue = 100;
+    //self.slider.minimumValue = 0;
+    //self.slider.maximumValue = 100;
     self.slider.value = 0.5;
     self.slider.backgroundColor = [UIColor whiteColor];
     [self.slider setMinimumTrackImage:[UIImage imageNamed:@"max.png"] forState:UIControlStateNormal];
@@ -405,7 +338,7 @@
     self.stepper = [UIStepper new];            //加减
     self.stepper.minimumValue = 0;
     self.stepper.maximumValue = 20;
-    self.stepper.stepValue = 2;                //点击＋2
+    self.stepper.stepValue = 2;  //点击＋2
     self.stepper.value = 3;
     [self.stepper addTarget:self action:@selector(stepperClick:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:_stepper];
@@ -444,6 +377,7 @@
         make.height.equalTo(30);
     }];
     
+    
 }
 #pragma mark -------------------------------------------------------------------------------------------------UISwitch------------------------------------------------------------
 - (void)ConfigureUISwitch
@@ -467,14 +401,13 @@
     [_switchOn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view.mas_centerX).offset(0);
         make.centerY.equalTo(self.view.mas_centerY).offset(0);
-        make.width.equalTo(40);
-        make.height.equalTo(28);
+        make.width.equalTo(51);
+        make.height.equalTo(31);
     }];
     
 }
 - (void)switchOnClick:(id)sender
 {
-    
     UISwitch *switc = (UISwitch *)sender;
     BOOL isButtonOn = [switc isOn];
     if (isButtonOn) {

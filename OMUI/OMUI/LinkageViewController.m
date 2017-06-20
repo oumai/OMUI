@@ -25,8 +25,8 @@
  */
 #import "UserInterfaceVC.h"  //所有控件
 #import "DetailUIVC.h"       //所有控件详情
-
-
+#import "LazyInitVC.h"       //懒加载创建
+#import "UITableViewVC.h"    //懒加载单独创建
 /*
  ②
  UITableViews
@@ -82,7 +82,7 @@
  */
 #import "RadiusViewController.h"
 
-@interface LinkageViewController ()<UITableViewDataSource,UITableViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
+@interface LinkageViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     UITableView *_rightTableView;
     UITableView *_leftTableView;
@@ -111,7 +111,7 @@
     
     
     _rightTableSource = @[@{@"header":@"所有控件",
-                            @"title":@[@"UserInterfaceVC",@"DetailUIVC",@"cc",@"dd",@"ee",@"ff"]},
+                            @"title":@[@"UserInterfaceVC",@"DetailUIVC",@"LazyInitVC",@"每个控件",@"ee",@"ff"]},
                           
                           @{@"header":@"UITableViews",
                             @"title":@[@"MyViewController",@"水平滑动的UITableView",@"LinkageVC",@"Setting",@"pp",@"qq"]},
@@ -296,7 +296,17 @@
                 DetailUIVC *bas = [DetailUIVC new];
                 [self.navigationController pushViewController:bas animated:YES];
             }
-            
+            else if (indexPath.row == 2)
+            {
+                LazyInitVC *bas = [LazyInitVC new];
+                [self.navigationController pushViewController:bas animated:YES];
+            }
+            else if (indexPath.row == 3)
+            {
+                UITableViewVC *vc = [UITableViewVC new];
+                vc.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:vc animated:YES];
+            }
         }
         /*
          UITableViews
