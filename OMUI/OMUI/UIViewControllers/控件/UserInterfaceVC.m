@@ -9,7 +9,7 @@
 
 
 @interface UserInterfaceVC ()
-
+@property (nonatomic, strong) TTTAttributedLabel *label;
 @property (nonatomic, strong) UILabel               *titleLabel;    //0
 @property (nonatomic, strong) UITextField           *textField;     //1
 @property (nonatomic, strong) UIButton              *button;        //2
@@ -29,7 +29,7 @@
 
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.typeui = 1;
+    self.typeui = 0;
     
     if (self.typeui == 0) {
         
@@ -100,6 +100,7 @@
     self.titleLabel.textColor = KHexColor(@"#999999");
     self.titleLabel.textAlignment = NSTextAlignmentLeft;
     self.titleLabel.text = @"titleLabel";
+    self.titleLabel.backgroundColor = [UIColor grayColor];
     [self.view addSubview:_titleLabel];
     
     
@@ -107,10 +108,12 @@
         make.centerX.equalTo(self.view.mas_centerX).offset(0);
         make.centerY.equalTo(self.view.mas_centerY).offset(0);
         make.width.equalTo(self.titleLabel.mas_width);
-        make.height.equalTo(14);
+        make.height.equalTo(self.titleLabel.mas_height);
     }];
     
-}
+    
+    
+   }
 #pragma mark -------------------------------------------------------------------------------------------------UITextField------------------------------------------------------------
 
 - (void)ConfigureTextField

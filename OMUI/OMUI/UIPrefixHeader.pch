@@ -13,37 +13,9 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
-
-#define MAS_SHORTHAND
-#define MAS_SHORTHAND_GLOBALS
-
-#define CoreWidth [UIScreen mainScreen].bounds.size.width
-#define CoreHeight [UIScreen mainScreen].bounds.size.height
-#define KFontSize(font) [UIFont systemFontOfSize:font]
-#define KHexColor(stringColor) [UIColor colorForHexString:stringColor]
-
-#define SCREEN_WIDTH   [UIScreen mainScreen].bounds.size.width
-#define SCREEN_HEIGHT  [UIScreen mainScreen].bounds.size.height
+#import "Header.h"
+#import "KMHealthBAT.h"
+#import "KMCloudHealth.h"
 
 
-//背景灰色
-#define BASE_BACKGROUND_COLOR UIColorFromHEX(0xf5f5f5, 1)
-//颜色
-// RGB颜色转换（16进制->10进制）
-#define UIColorFromHEX(rgbValue,A) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:A]
-#define UIColorFromRGB(R,G,B,A) [UIColor colorWithRed:R/255.0f green:G/255.0f blue:B/255.0f alpha:A]
-
-
-#import "Masonry.h"
-#import "TTTAttributedLabel.h"
-#import "UIColor+HNExtensions.h"
-#import "UIButton+SQTool.h"
-#import "UIButton+Tool.h"
-#import "UIImage+Tool.h"
-
-
-#define DeepColor       KHexColor(@"#3e3a39")
-#define LightColor      KHexColor(@"#878787")
-#define BackgroundColor KHexColor(@"#f24818")
-#define LineColor       KHexColor(@"#c6c6c6")
 #endif /* UIPrefixHeader_pch */

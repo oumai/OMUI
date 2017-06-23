@@ -76,6 +76,8 @@
 		ADA1B6C41EF8FC6B00FB68A9 /* UIStepperVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA1B6C31EF8FC6B00FB68A9 /* UIStepperVC.m */; };
 		ADA1B6C71EF8FC8200FB68A9 /* UIProgressViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA1B6C61EF8FC8200FB68A9 /* UIProgressViewVC.m */; };
 		ADA1B6CA1EF8FC9100FB68A9 /* UISwitchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA1B6C91EF8FC9100FB68A9 /* UISwitchVC.m */; };
+		ADA1B6CE1EF912A000FB68A9 /* KMCloudWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA1B6CD1EF912A000FB68A9 /* KMCloudWebView.m */; };
+		ADA1B6D11EF9130D00FB68A9 /* WYWebProgressLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA1B6D01EF9130D00FB68A9 /* WYWebProgressLayer.m */; };
 		ADF54D7A1EEA9463001766EB /* LinkageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF54D791EEA9463001766EB /* LinkageViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -222,6 +224,13 @@
 		ADA1B6C61EF8FC8200FB68A9 /* UIProgressViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIProgressViewVC.m; sourceTree = "<group>"; };
 		ADA1B6C81EF8FC9100FB68A9 /* UISwitchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISwitchVC.h; sourceTree = "<group>"; };
 		ADA1B6C91EF8FC9100FB68A9 /* UISwitchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISwitchVC.m; sourceTree = "<group>"; };
+		ADA1B6CC1EF912A000FB68A9 /* KMCloudWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMCloudWebView.h; sourceTree = "<group>"; };
+		ADA1B6CD1EF912A000FB68A9 /* KMCloudWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMCloudWebView.m; sourceTree = "<group>"; };
+		ADA1B6CF1EF9130D00FB68A9 /* WYWebProgressLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYWebProgressLayer.h; sourceTree = "<group>"; };
+		ADA1B6D01EF9130D00FB68A9 /* WYWebProgressLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWebProgressLayer.m; sourceTree = "<group>"; };
+		ADA1B6D31EF9143400FB68A9 /* KMHealthBAT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMHealthBAT.h; sourceTree = "<group>"; };
+		ADA1B6D41EF9145F00FB68A9 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		ADA1B6D51EF9148300FB68A9 /* KMCloudHealth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMCloudHealth.h; sourceTree = "<group>"; };
 		ADF54D781EEA9463001766EB /* LinkageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkageViewController.h; sourceTree = "<group>"; };
 		ADF54D791EEA9463001766EB /* LinkageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -288,6 +297,9 @@
 			children = (
 				A73F679C1E8CF5D200C119BE /* main.m */,
 				A73F67B21E8CF85800C119BE /* UIPrefixHeader.pch */,
+				ADA1B6D41EF9145F00FB68A9 /* Header.h */,
+				ADA1B6D31EF9143400FB68A9 /* KMHealthBAT.h */,
+				ADA1B6D51EF9148300FB68A9 /* KMCloudHealth.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -737,6 +749,7 @@
 			children = (
 				ADA1B6C51EF8FC8200FB68A9 /* UIProgressViewVC.h */,
 				ADA1B6C61EF8FC8200FB68A9 /* UIProgressViewVC.m */,
+				ADA1B6CB1EF9127E00FB68A9 /* 加载进度条 */,
 			);
 			path = UIProgressView;
 			sourceTree = "<group>";
@@ -793,6 +806,17 @@
 				ADA1B6BA1EF8FC2F00FB68A9 /* UIViewVC.m */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		ADA1B6CB1EF9127E00FB68A9 /* 加载进度条 */ = {
+			isa = PBXGroup;
+			children = (
+				ADA1B6CC1EF912A000FB68A9 /* KMCloudWebView.h */,
+				ADA1B6CD1EF912A000FB68A9 /* KMCloudWebView.m */,
+				ADA1B6CF1EF9130D00FB68A9 /* WYWebProgressLayer.h */,
+				ADA1B6D01EF9130D00FB68A9 /* WYWebProgressLayer.m */,
+			);
+			path = "加载进度条";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -883,6 +907,7 @@
 				A73F67E11E8CFB3800C119BE /* UIButton+Tool.m in Sources */,
 				AD22D7131EEFD71E00B13AAE /* SettingCell.m in Sources */,
 				A73F67DF1E8CFB3800C119BE /* NSString+SQTool.m in Sources */,
+				ADA1B6D11EF9130D00FB68A9 /* WYWebProgressLayer.m in Sources */,
 				AD22D7011EEFCA0B00B13AAE /* BATCustomButton.m in Sources */,
 				A7416EED1E978D3C00DB503D /* ViewCollectionCell.m in Sources */,
 				A73F67A31E8CF5D200C119BE /* ViewController.m in Sources */,
@@ -930,6 +955,7 @@
 				A7416EE51E976DB100DB503D /* FDAlertView.m in Sources */,
 				A7416EE91E976DB100DB503D /* WYStoryboardPopoverSegue.m in Sources */,
 				ADA1B6CA1EF8FC9100FB68A9 /* UISwitchVC.m in Sources */,
+				ADA1B6CE1EF912A000FB68A9 /* KMCloudWebView.m in Sources */,
 				A79B67001EA9AA8B00F4F0FD /* GestureVC.m in Sources */,
 				A75481761E9B57B2006666C0 /* PopViewController.m in Sources */,
 				A73F67EA1E8CFB3800C119BE /* MASViewConstraint.m in Sources */,

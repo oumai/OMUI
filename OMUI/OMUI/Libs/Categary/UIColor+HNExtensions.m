@@ -574,11 +574,11 @@ static NSUInteger const ColorAlphaChannel = 3;
             continue;
         }
         
-        CGFloat saturationDiff = fabsf([color getSaturation] - idealSaturation);
+        CGFloat saturationDiff = fabs([color getSaturation] - idealSaturation);
         if (saturationDiff >= bestSaturationDiff)
             continue;
         
-        CGFloat brightnessDiff = fabsf([color getBrightness] - idealBrightness);
+        CGFloat brightnessDiff = fabs([color getBrightness] - idealBrightness);
         if (brightnessDiff >= bestBrightnessDiff)
             continue;
         

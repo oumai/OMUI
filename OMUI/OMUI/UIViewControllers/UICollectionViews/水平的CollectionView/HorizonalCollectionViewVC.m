@@ -9,7 +9,7 @@ static NSString *identifier = @"HorizonalCollectionCell";
 
 #import "HorizonalCollectionViewVC.h"
 #import "HorizonalCollectionCell.h"
-@interface HorizonalCollectionViewVC ()<UICollectionViewDataSource>
+@interface HorizonalCollectionViewVC ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (nonatomic, strong) UICollectionViewFlowLayout    *layout;
 @property (nonatomic, strong) UICollectionView          *collectionView;
 

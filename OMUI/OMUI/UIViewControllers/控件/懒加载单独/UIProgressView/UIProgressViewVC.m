@@ -7,7 +7,7 @@
 //
 
 #import "UIProgressViewVC.h"
-
+#import "KMCloudWebView.h"
 @interface UIProgressViewVC ()
 @property (nonatomic, strong) UIProgressView *progressView;
 @end
@@ -17,6 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.view.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapClick)];
+    [self.view addGestureRecognizer:tap];
+    //网络加载进度条
+}
+- (void)tapClick
+{
+    KMCloudWebView *vc = [KMCloudWebView new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)configureProgressView
+{
     [self.view addSubview:_progressView];
     
     
