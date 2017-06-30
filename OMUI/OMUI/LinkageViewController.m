@@ -35,7 +35,9 @@
 #import "HorizonalTableViewVC.h"//水平滑动的UITableView
 #import "LinkageVC.h"           //联动效果
 #import "SettingViewController.h"//设置界面
-/*
+#import "TianZiGeTableViewVC.h"  //田字格界面
+#import "CircleListVC.h"        //圈圈
+ /*
  ③
  UIScrollView
  */
@@ -114,7 +116,7 @@
                             @"title":@[@"UserInterfaceVC",@"DetailUIVC",@"LazyInitVC",@"每个控件",@"ee",@"ff"]},
                           
                           @{@"header":@"UITableViews",
-                            @"title":@[@"MyViewController",@"水平滑动的UITableView",@"LinkageVC",@"Setting",@"pp",@"qq"]},
+                            @"title":@[@"MyViewController",@"水平滑动的UITableView",@"LinkageVC",@"李赛强的设置",@"田字格",@"CircleListVC"]},
                           
                           @{@"header":@"UIScrollView",
                             @"title":@[@"GradientVC",@"ChangeViewScrollVC",@"jj",@"xx",@"yy",@"zz"]},
@@ -335,6 +337,19 @@
                 //设置界面
                 SettingViewController *vc = [SettingViewController new];
                 [self.navigationController pushViewController:vc animated:YES];
+            }
+            else if (indexPath.row == 4)
+            {
+                TianZiGeTableViewVC *vc = [TianZiGeTableViewVC new];
+                [self.navigationController pushViewController:vc animated:YES];
+                
+
+            }
+            else if (indexPath.row == 5)
+            {
+                CircleListVC *vc = [CircleListVC new];
+                [self.navigationController pushViewController:vc animated:YES];
+                
             }
             
         }

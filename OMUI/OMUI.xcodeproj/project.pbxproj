@@ -64,6 +64,15 @@
 		AD22D7131EEFD71E00B13AAE /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD22D7121EEFD71E00B13AAE /* SettingCell.m */; };
 		AD22D7161EEFD73900B13AAE /* SettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD22D7151EEFD73900B13AAE /* SettingModel.m */; };
 		AD22D71B1EEFE9E800B13AAE /* RadiusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD22D71A1EEFE9E800B13AAE /* RadiusViewController.m */; };
+		AD32FAD91F04EC9700D7E600 /* TianZiGeTableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32FAD81F04EC9700D7E600 /* TianZiGeTableViewVC.m */; };
+		AD32FAE11F04EE8200D7E600 /* TianZiGeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32FAE01F04EE8200D7E600 /* TianZiGeModel.m */; };
+		AD32FAEA1F04F62500D7E600 /* BloodSugarRecordGeZiView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32FAE81F04F62500D7E600 /* BloodSugarRecordGeZiView.m */; };
+		AD32FAF01F04F70C00D7E600 /* BloodSugarRecordCountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32FAEF1F04F70C00D7E600 /* BloodSugarRecordCountModel.m */; };
+		AD32FAF41F04F85800D7E600 /* BloodSugarRecordCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32FAF31F04F85800D7E600 /* BloodSugarRecordCustomCell.m */; };
+		AD32FAF81F04F9C700D7E600 /* XieXianView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32FAF71F04F9C700D7E600 /* XieXianView.m */; };
+		AD32FB081F04FE4C00D7E600 /* CircleListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32FB011F04FE4C00D7E600 /* CircleListVC.m */; };
+		AD32FB091F04FE4C00D7E600 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32FB041F04FE4C00D7E600 /* DrawView.m */; };
+		AD32FB0A1F04FE4C00D7E600 /* CircleCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32FB061F04FE4C00D7E600 /* CircleCustomCell.m */; };
 		AD6D1C721EF76AAE00356E43 /* LazyInitVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6D1C711EF76AAE00356E43 /* LazyInitVC.m */; };
 		ADA1B6A21EF8F72D00FB68A9 /* UITableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA1B6A11EF8F72D00FB68A9 /* UITableViewVC.m */; };
 		ADA1B6AF1EF8FBB900FB68A9 /* UILabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA1B6AE1EF8FBB900FB68A9 /* UILabelVC.m */; };
@@ -94,7 +103,6 @@
 		A73F67A71E8CF5D200C119BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A73F67AA1E8CF5D200C119BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A73F67AC1E8CF5D200C119BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A73F67B21E8CF85800C119BE /* UIPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIPrefixHeader.pch; sourceTree = "<group>"; };
 		A73F67B51E8CFB3800C119BE /* NSAttributedString+ParagraphStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+ParagraphStyle.h"; sourceTree = "<group>"; };
 		A73F67B61E8CFB3800C119BE /* NSAttributedString+ParagraphStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+ParagraphStyle.m"; sourceTree = "<group>"; };
 		A73F67B71E8CFB3800C119BE /* NSString+SQTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SQTool.h"; sourceTree = "<group>"; };
@@ -200,6 +208,26 @@
 		AD22D7151EEFD73900B13AAE /* SettingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingModel.m; sourceTree = "<group>"; };
 		AD22D7191EEFE9E800B13AAE /* RadiusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadiusViewController.h; sourceTree = "<group>"; };
 		AD22D71A1EEFE9E800B13AAE /* RadiusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadiusViewController.m; sourceTree = "<group>"; };
+		AD32FAD71F04EC9700D7E600 /* TianZiGeTableViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TianZiGeTableViewVC.h; sourceTree = "<group>"; };
+		AD32FAD81F04EC9700D7E600 /* TianZiGeTableViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TianZiGeTableViewVC.m; sourceTree = "<group>"; };
+		AD32FADF1F04EE8200D7E600 /* TianZiGeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TianZiGeModel.h; sourceTree = "<group>"; };
+		AD32FAE01F04EE8200D7E600 /* TianZiGeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TianZiGeModel.m; sourceTree = "<group>"; };
+		AD32FAE71F04F62500D7E600 /* BloodSugarRecordGeZiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BloodSugarRecordGeZiView.h; sourceTree = "<group>"; };
+		AD32FAE81F04F62500D7E600 /* BloodSugarRecordGeZiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BloodSugarRecordGeZiView.m; sourceTree = "<group>"; };
+		AD32FAEE1F04F70C00D7E600 /* BloodSugarRecordCountModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BloodSugarRecordCountModel.h; sourceTree = "<group>"; };
+		AD32FAEF1F04F70C00D7E600 /* BloodSugarRecordCountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BloodSugarRecordCountModel.m; sourceTree = "<group>"; };
+		AD32FAF11F04F7A400D7E600 /* AngelDoctor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AngelDoctor.h; sourceTree = "<group>"; };
+		AD32FAF21F04F85800D7E600 /* BloodSugarRecordCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BloodSugarRecordCustomCell.h; sourceTree = "<group>"; };
+		AD32FAF31F04F85800D7E600 /* BloodSugarRecordCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BloodSugarRecordCustomCell.m; sourceTree = "<group>"; };
+		AD32FAF51F04F94B00D7E600 /* UIPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPrefixHeader.pch; sourceTree = "<group>"; };
+		AD32FAF61F04F9C700D7E600 /* XieXianView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XieXianView.h; sourceTree = "<group>"; };
+		AD32FAF71F04F9C700D7E600 /* XieXianView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XieXianView.m; sourceTree = "<group>"; };
+		AD32FB001F04FE4C00D7E600 /* CircleListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleListVC.h; sourceTree = "<group>"; };
+		AD32FB011F04FE4C00D7E600 /* CircleListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleListVC.m; sourceTree = "<group>"; };
+		AD32FB031F04FE4C00D7E600 /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
+		AD32FB041F04FE4C00D7E600 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
+		AD32FB051F04FE4C00D7E600 /* CircleCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleCustomCell.h; sourceTree = "<group>"; };
+		AD32FB061F04FE4C00D7E600 /* CircleCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleCustomCell.m; sourceTree = "<group>"; };
 		AD6D1C701EF76AAE00356E43 /* LazyInitVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyInitVC.h; sourceTree = "<group>"; };
 		AD6D1C711EF76AAE00356E43 /* LazyInitVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyInitVC.m; sourceTree = "<group>"; };
 		ADA1B6A01EF8F72D00FB68A9 /* UITableViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewVC.h; sourceTree = "<group>"; };
@@ -295,10 +323,11 @@
 		A73F679B1E8CF5D200C119BE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AD32FAF51F04F94B00D7E600 /* UIPrefixHeader.pch */,
 				A73F679C1E8CF5D200C119BE /* main.m */,
-				A73F67B21E8CF85800C119BE /* UIPrefixHeader.pch */,
 				ADA1B6D41EF9145F00FB68A9 /* Header.h */,
 				ADA1B6D31EF9143400FB68A9 /* KMHealthBAT.h */,
+				AD32FAF11F04F7A400D7E600 /* AngelDoctor.h */,
 				ADA1B6D51EF9148300FB68A9 /* KMCloudHealth.h */,
 			);
 			name = "Supporting Files";
@@ -439,6 +468,8 @@
 				AD22D7041EEFD48400B13AAE /* 联动 */,
 				AD22D7071EEFD48400B13AAE /* 水平滑动 */,
 				A7416EC01E972EAA00DB503D /* 自定义Cell */,
+				AD32FAD61F04EBB300D7E600 /* 方格表 */,
+				AD32FAFC1F04FE4C00D7E600 /* CircleList */,
 			);
 			path = UITableViews;
 			sourceTree = "<group>";
@@ -689,6 +720,62 @@
 			path = "部分圆角";
 			sourceTree = "<group>";
 		};
+		AD32FAD61F04EBB300D7E600 /* 方格表 */ = {
+			isa = PBXGroup;
+			children = (
+				AD32FAD71F04EC9700D7E600 /* TianZiGeTableViewVC.h */,
+				AD32FAD81F04EC9700D7E600 /* TianZiGeTableViewVC.m */,
+				AD32FADA1F04EE0C00D7E600 /* Model */,
+				AD32FADB1F04EE0C00D7E600 /* View */,
+			);
+			path = "方格表";
+			sourceTree = "<group>";
+		};
+		AD32FADA1F04EE0C00D7E600 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD32FAEE1F04F70C00D7E600 /* BloodSugarRecordCountModel.h */,
+				AD32FAEF1F04F70C00D7E600 /* BloodSugarRecordCountModel.m */,
+				AD32FADF1F04EE8200D7E600 /* TianZiGeModel.h */,
+				AD32FAE01F04EE8200D7E600 /* TianZiGeModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AD32FADB1F04EE0C00D7E600 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD32FAF61F04F9C700D7E600 /* XieXianView.h */,
+				AD32FAF71F04F9C700D7E600 /* XieXianView.m */,
+				AD32FAF21F04F85800D7E600 /* BloodSugarRecordCustomCell.h */,
+				AD32FAF31F04F85800D7E600 /* BloodSugarRecordCustomCell.m */,
+				AD32FAE71F04F62500D7E600 /* BloodSugarRecordGeZiView.h */,
+				AD32FAE81F04F62500D7E600 /* BloodSugarRecordGeZiView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD32FAFC1F04FE4C00D7E600 /* CircleList */ = {
+			isa = PBXGroup;
+			children = (
+				AD32FB001F04FE4C00D7E600 /* CircleListVC.h */,
+				AD32FB011F04FE4C00D7E600 /* CircleListVC.m */,
+				AD32FB021F04FE4C00D7E600 /* View */,
+			);
+			path = CircleList;
+			sourceTree = "<group>";
+		};
+		AD32FB021F04FE4C00D7E600 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD32FB031F04FE4C00D7E600 /* DrawView.h */,
+				AD32FB041F04FE4C00D7E600 /* DrawView.m */,
+				AD32FB051F04FE4C00D7E600 /* CircleCustomCell.h */,
+				AD32FB061F04FE4C00D7E600 /* CircleCustomCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		AD6D1C6C1EF7663B00356E43 /* 懒创建 */ = {
 			isa = PBXGroup;
 			children = (
@@ -852,6 +939,11 @@
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = QE8C5ZYQ72;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -894,6 +986,7 @@
 				AD22D6FB1EEFC97700B13AAE /* GradientViewController.m in Sources */,
 				ADA1B6C11EF8FC5700FB68A9 /* UISliderVC.m in Sources */,
 				A7416EC81E972EAA00DB503D /* GradientVC.m in Sources */,
+				AD32FB091F04FE4C00D7E600 /* DrawView.m in Sources */,
 				AD22D70E1EEFD60900B13AAE /* SettingViewController.m in Sources */,
 				A7416ECE1E97320900DB503D /* CustomCollectionsVC.m in Sources */,
 				AD22D7161EEFD73900B13AAE /* SettingModel.m in Sources */,
@@ -921,14 +1014,18 @@
 				ADA1B6C71EF8FC8200FB68A9 /* UIProgressViewVC.m in Sources */,
 				ADA1B6BE1EF8FC4400FB68A9 /* UISegmentedControlVC.m in Sources */,
 				A7E53DE91E8FA4CA0099ABC6 /* DetailUIVC.m in Sources */,
+				AD32FAE11F04EE8200D7E600 /* TianZiGeModel.m in Sources */,
 				A7416EE61E976DB100DB503D /* SheetActionView.m in Sources */,
 				A73F67E51E8CFB3800C119BE /* MASCompositeConstraint.m in Sources */,
 				A7416ECB1E972EAA00DB503D /* MyViewController.m in Sources */,
+				AD32FAF01F04F70C00D7E600 /* BloodSugarRecordCountModel.m in Sources */,
 				A73F679D1E8CF5D200C119BE /* main.m in Sources */,
+				AD32FB0A1F04FE4C00D7E600 /* CircleCustomCell.m in Sources */,
 				A73F67E31E8CFB3800C119BE /* UIImage+Tool.m in Sources */,
 				AD22D7021EEFCA0B00B13AAE /* BATGraditorButton.m in Sources */,
 				A714F9A71E9DCC4C007849EE /* UIPickerViewController.m in Sources */,
 				A7416ECA1E972EAA00DB503D /* MyCell.m in Sources */,
+				AD32FAEA1F04F62500D7E600 /* BloodSugarRecordGeZiView.m in Sources */,
 				A7416EC71E972EAA00DB503D /* ChangeViewScrollVC.m in Sources */,
 				ADA1B6BB1EF8FC2F00FB68A9 /* UIViewVC.m in Sources */,
 				A73F67E71E8CFB3800C119BE /* MASConstraintMaker.m in Sources */,
@@ -939,18 +1036,22 @@
 				A7416EC61E972EAA00DB503D /* HorizonalCollectionViewVC.m in Sources */,
 				A73F67E61E8CFB3800C119BE /* MASConstraint.m in Sources */,
 				A7416ED41E97329000DB503D /* HeaderCollectionReusableView.m in Sources */,
+				AD32FAD91F04EC9700D7E600 /* TianZiGeTableViewVC.m in Sources */,
 				ADA1B6AF1EF8FBB900FB68A9 /* UILabelVC.m in Sources */,
 				A7795A231E8DE9F000D19BEB /* UserInterfaceVC.m in Sources */,
 				A73F67EC1E8CFB3800C119BE /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				A73F67E81E8CFB3800C119BE /* MASLayoutConstraint.m in Sources */,
 				ADA1B6B51EF8FBE600FB68A9 /* UIButtonVC.m in Sources */,
+				AD32FB081F04FE4C00D7E600 /* CircleListVC.m in Sources */,
 				AD22D70A1EEFD48400B13AAE /* LinkageVC.m in Sources */,
+				AD32FAF41F04F85800D7E600 /* BloodSugarRecordCustomCell.m in Sources */,
 				A7416EE81E976DB100DB503D /* WYPopoverController.m in Sources */,
 				A73F67EB1E8CFB3800C119BE /* NSArray+MASAdditions.m in Sources */,
 				ADA1B6B81EF8FC2100FB68A9 /* UIImageViewVC.m in Sources */,
 				A73F67E41E8CFB3800C119BE /* UILabel+Siman.m in Sources */,
 				A73F67E01E8CFB3800C119BE /* UIButton+SQTool.m in Sources */,
 				A73F67E21E8CFB3800C119BE /* UIColor+HNExtensions.m in Sources */,
+				AD32FAF81F04F9C700D7E600 /* XieXianView.m in Sources */,
 				A7416EC51E972EAA00DB503D /* HorizonalCollectionCell.m in Sources */,
 				A7416EE51E976DB100DB503D /* FDAlertView.m in Sources */,
 				A7416EE91E976DB100DB503D /* WYStoryboardPopoverSegue.m in Sources */,

@@ -22,11 +22,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.title = @"UITableView";
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:(UITableViewStylePlain)];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.rowHeight = 180;
+    self.tableView.bounces = NO;//禁止弹性
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_tableView];
     [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -53,4 +54,8 @@
     
     
 }
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+}
+
 @end

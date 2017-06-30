@@ -121,7 +121,7 @@
         _tableView.dataSource = self;
         _tableView.rowHeight = 55;
         //_tableView.tableHeaderView = self.headerView;  //表头
-        [_tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+        [_tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:fileCellID];
         
         

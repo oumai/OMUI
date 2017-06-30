@@ -16,6 +16,6 @@
 #import "Header.h"
 #import "KMHealthBAT.h"
 #import "KMCloudHealth.h"
-
+#import "AngelDoctor.h"
 
 #endif /* UIPrefixHeader_pch */
