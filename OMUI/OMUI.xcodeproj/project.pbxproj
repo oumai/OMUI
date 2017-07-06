@@ -73,6 +73,7 @@
 		AD32FB081F04FE4C00D7E600 /* CircleListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32FB011F04FE4C00D7E600 /* CircleListVC.m */; };
 		AD32FB091F04FE4C00D7E600 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32FB041F04FE4C00D7E600 /* DrawView.m */; };
 		AD32FB0A1F04FE4C00D7E600 /* CircleCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32FB061F04FE4C00D7E600 /* CircleCustomCell.m */; };
+		AD6CEAE41F0E39430013BD7F /* UIAlertControllerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6CEAE31F0E39430013BD7F /* UIAlertControllerVC.m */; };
 		AD6D1C721EF76AAE00356E43 /* LazyInitVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6D1C711EF76AAE00356E43 /* LazyInitVC.m */; };
 		ADA1B6A21EF8F72D00FB68A9 /* UITableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA1B6A11EF8F72D00FB68A9 /* UITableViewVC.m */; };
 		ADA1B6AF1EF8FBB900FB68A9 /* UILabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA1B6AE1EF8FBB900FB68A9 /* UILabelVC.m */; };
@@ -228,6 +229,8 @@
 		AD32FB041F04FE4C00D7E600 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 		AD32FB051F04FE4C00D7E600 /* CircleCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleCustomCell.h; sourceTree = "<group>"; };
 		AD32FB061F04FE4C00D7E600 /* CircleCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleCustomCell.m; sourceTree = "<group>"; };
+		AD6CEAE21F0E39430013BD7F /* UIAlertControllerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAlertControllerVC.h; sourceTree = "<group>"; };
+		AD6CEAE31F0E39430013BD7F /* UIAlertControllerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertControllerVC.m; sourceTree = "<group>"; };
 		AD6D1C701EF76AAE00356E43 /* LazyInitVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyInitVC.h; sourceTree = "<group>"; };
 		AD6D1C711EF76AAE00356E43 /* LazyInitVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyInitVC.m; sourceTree = "<group>"; };
 		ADA1B6A01EF8F72D00FB68A9 /* UITableViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewVC.h; sourceTree = "<group>"; };
@@ -507,6 +510,7 @@
 				A75FD9561E9C64F800D85FA5 /* PickTimeView */,
 				AD17D92A1EF2851700163A8F /* OMUIPickerView */,
 				A714F9A41E9DCC31007849EE /* UIPickerView */,
+				AD6CEAE11F0E38F70013BD7F /* iOS8弹框 */,
 				A7416EE01E976DB100DB503D /* WYPopoverController */,
 			);
 			path = "弹框";
@@ -776,6 +780,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		AD6CEAE11F0E38F70013BD7F /* iOS8弹框 */ = {
+			isa = PBXGroup;
+			children = (
+				AD6CEAE21F0E39430013BD7F /* UIAlertControllerVC.h */,
+				AD6CEAE31F0E39430013BD7F /* UIAlertControllerVC.m */,
+			);
+			path = "iOS8弹框";
+			sourceTree = "<group>";
+		};
 		AD6D1C6C1EF7663B00356E43 /* 懒创建 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1010,6 +1023,7 @@
 				ADA1B6B21EF8FBD300FB68A9 /* UITextFieldVC.m in Sources */,
 				A79B67041EA9AAE600F4F0FD /* KMGestureRecognizer.m in Sources */,
 				A7416ED51E97329000DB503D /* CustomCollectionViewCell.m in Sources */,
+				AD6CEAE41F0E39430013BD7F /* UIAlertControllerVC.m in Sources */,
 				A73F67E91E8CFB3800C119BE /* MASViewAttribute.m in Sources */,
 				ADA1B6C71EF8FC8200FB68A9 /* UIProgressViewVC.m in Sources */,
 				ADA1B6BE1EF8FC4400FB68A9 /* UISegmentedControlVC.m in Sources */,

@@ -17,6 +17,7 @@
 #import "WYPopoverController.h"
 #import "UIPickerViewController.h"
 #import "OMPickerViewVC.h"
+#import "UIAlertControllerVC.h"
 @interface PopViewController ()<UITableViewDelegate,UITableViewDataSource,FDAlertViewDelegate,WYPopoverControllerDelegate>
 {
     WYPopoverController* popoverController;
@@ -46,7 +47,7 @@
         make.top.left.bottom.right.equalTo(self.view);
     }];
     self.titleArray = [NSMutableArray array];
-    self.titleArray = @[@"FDAlertView",@"SheetActionView",@"TanKuangView",@"PickTimeView",@"UIPickerView",@"WYPopoverController",@"OMPickerViewVC",@"",@"",@"",@"",@"",@"",@""];
+    self.titleArray = @[@"FDAlertView",@"SheetActionView",@"TanKuangView",@"PickTimeView",@"UIPickerView",@"WYPopoverController",@"OMPickerViewVC",@"UIAlertControllerVC",@"",@"",@"",@"",@"",@""];
     
 }
 - (void)viewWillAppear:(BOOL)animated
@@ -103,6 +104,12 @@
     if (indexPath.row == 6) {
         
         OMPickerViewVC *vc = [[OMPickerViewVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    
+    if (indexPath.row == 7) {
+        
+        UIAlertControllerVC *vc = [UIAlertControllerVC new];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

@@ -62,7 +62,7 @@
 #import "SheetActionView.h"
 #import "FDAlertView.h"
 #import "WYPopoverController.h"
-
+#import "UIAlertControllerVC.h"
 
 /*
  ⑥
@@ -125,7 +125,7 @@
                             @"title":@[@"水平的滑动",@"自定义Collection有表头",@"cc",@"dd",@"ee",@"ff"]},
                           
                           @{@"header":@"弹框",
-                            @"title":@[@"PopViewController",@"TanKuangView",@"SheetActionView",@"FDAlertView",@"WYPopoverController",@"qq"]},
+                            @"title":@[@"PopViewController",@"TanKuangView",@"SheetActionView",@"FDAlertView",@"WYPopoverController",@"OMPickerViewVC",@"UIAlertControllerVC"]},
                           
                           @{@"header":@"手势",
                             @"title":@[@"GestureVC",@"ss",@"jj",@"xx",@"yy",@"zz"]},

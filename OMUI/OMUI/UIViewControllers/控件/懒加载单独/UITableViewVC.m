@@ -5,7 +5,7 @@
 //  Created by MichaeOu on 2017/6/20.
 //  Copyright © 2017年 康美. All rights reserved.
 //
-#define fileCellID @"UITableViewCellID"
+#define CustomCellID @"UITableViewCellID"
 #import "UITableViewVC.h"
 #import "UILabelVC.h"
 #import "UITextFieldVC.h"
@@ -43,9 +43,9 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:fileCellID];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CustomCellID];
     if (nil == cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:fileCellID];
+        cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:CustomCellID];
     }
     cell.textLabel.text = _array[indexPath.row];
     return cell;
@@ -71,7 +71,6 @@
     {
         UIImageViewVC  *vc = [UIImageViewVC new];
         [self.navigationController pushViewController:vc animated:YES];
-
     }
     else if (indexPath.row == 4)
     {
@@ -122,7 +121,7 @@
         _tableView.rowHeight = 55;
         //_tableView.tableHeaderView = self.headerView;  //表头
         [_tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
-        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:fileCellID];
+        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CustomCellID];
         
         
     }
