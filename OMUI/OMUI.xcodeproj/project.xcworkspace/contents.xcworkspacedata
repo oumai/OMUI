@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:OMUI.xcodeproj">
+      location = "group:/Users/xinhuakangmei/OMUI/OMUI/OMUI/UIViewControllers/&#x52a8;&#x753b;/Cell&#x52a8;&#x753b;/TableViewAnimationKit/BaseTableViewController.h">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/xinhuakangmei/OMUI/OMUI/OMUI/UIViewControllers/&#x52a8;&#x753b;/Cell&#x52a8;&#x753b;/TableViewAnimationKit/BaseTableViewController.m">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

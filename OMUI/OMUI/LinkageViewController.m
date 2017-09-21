@@ -84,6 +84,12 @@
  */
 #import "RadiusViewController.h"
 
+
+/*
+ ⑨
+ 动画
+ */
+#import "CellAnimationVC.h"
 @interface LinkageViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     UITableView *_rightTableView;
@@ -108,7 +114,8 @@
                          @"弹框",
                          @"手势",
                          @"渐变",
-                         @"其他"
+                         @"其他",
+                         @"动画"
                          ];
     
     
@@ -134,7 +141,10 @@
                             @"title":@[@"GradientViewController",@"ss",@"jj",@"xx",@"yy",@"zz"]},
                           
                           @{@"header":@"其他",
-                            @"title":@[@"RdiusViewController",@"ss",@"jj",@"xx",@"yy",@"zz"]}
+                            @"title":@[@"RdiusViewController",@"ss",@"jj",@"xx",@"yy",@"zz"]},
+                          
+                          @{@"header":@"动画",
+                            @"title":@[@"cell动画"]}
                           
                           ];
     
@@ -409,6 +419,7 @@
             [self.navigationController pushViewController:gra animated:YES];
 
         }
+        /*渐变*/
         else if (indexPath.section == 7)
         {
 
@@ -422,6 +433,17 @@
             else if (indexPath.row == 2) {
                 
             }
+        }
+        /*动画*/
+        else if (indexPath.section == 8)
+        {
+            //cell动画
+            if (indexPath.row == 0) {
+                CellAnimationVC *gra = [CellAnimationVC new];
+                [self.navigationController pushViewController:gra animated:YES];
+            }
+            
+            
         }
 
     }

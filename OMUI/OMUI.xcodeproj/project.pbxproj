@@ -73,6 +73,10 @@
 		AD32FB081F04FE4C00D7E600 /* CircleListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32FB011F04FE4C00D7E600 /* CircleListVC.m */; };
 		AD32FB091F04FE4C00D7E600 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32FB041F04FE4C00D7E600 /* DrawView.m */; };
 		AD32FB0A1F04FE4C00D7E600 /* CircleCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32FB061F04FE4C00D7E600 /* CircleCustomCell.m */; };
+		AD6468491F73B65400A82A64 /* CellAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6468481F73B65400A82A64 /* CellAnimationVC.m */; };
+		AD64686E1F73B82E00A82A64 /* TableViewAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6468691F73B82E00A82A64 /* TableViewAnimationKit.m */; };
+		AD64686F1F73B82E00A82A64 /* UITableView+XSAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AD64686D1F73B82E00A82A64 /* UITableView+XSAnimationKit.m */; };
+		AD6468751F73B98D00A82A64 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6468741F73B98C00A82A64 /* BaseTableViewController.m */; };
 		AD6CEAE41F0E39430013BD7F /* UIAlertControllerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6CEAE31F0E39430013BD7F /* UIAlertControllerVC.m */; };
 		AD6D1C721EF76AAE00356E43 /* LazyInitVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6D1C711EF76AAE00356E43 /* LazyInitVC.m */; };
 		ADA1B6A21EF8F72D00FB68A9 /* UITableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA1B6A11EF8F72D00FB68A9 /* UITableViewVC.m */; };
@@ -229,6 +233,16 @@
 		AD32FB041F04FE4C00D7E600 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 		AD32FB051F04FE4C00D7E600 /* CircleCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleCustomCell.h; sourceTree = "<group>"; };
 		AD32FB061F04FE4C00D7E600 /* CircleCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleCustomCell.m; sourceTree = "<group>"; };
+		AD6468471F73B65400A82A64 /* CellAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellAnimationVC.h; sourceTree = "<group>"; };
+		AD6468481F73B65400A82A64 /* CellAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellAnimationVC.m; sourceTree = "<group>"; };
+		AD6468681F73B82E00A82A64 /* TableViewAnimationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewAnimationKit.h; sourceTree = "<group>"; };
+		AD6468691F73B82E00A82A64 /* TableViewAnimationKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewAnimationKit.m; sourceTree = "<group>"; };
+		AD64686A1F73B82E00A82A64 /* TableViewAnimationKitConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewAnimationKitConfig.h; sourceTree = "<group>"; };
+		AD64686B1F73B82E00A82A64 /* TableViewAnimationKitHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewAnimationKitHeaders.h; sourceTree = "<group>"; };
+		AD64686C1F73B82E00A82A64 /* UITableView+XSAnimationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+XSAnimationKit.h"; sourceTree = "<group>"; };
+		AD64686D1F73B82E00A82A64 /* UITableView+XSAnimationKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+XSAnimationKit.m"; sourceTree = "<group>"; };
+		AD6468731F73B98C00A82A64 /* BaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		AD6468741F73B98C00A82A64 /* BaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		AD6CEAE21F0E39430013BD7F /* UIAlertControllerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAlertControllerVC.h; sourceTree = "<group>"; };
 		AD6CEAE31F0E39430013BD7F /* UIAlertControllerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertControllerVC.m; sourceTree = "<group>"; };
 		AD6D1C701EF76AAE00356E43 /* LazyInitVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyInitVC.h; sourceTree = "<group>"; };
@@ -577,6 +591,7 @@
 		A7795A1F1E8DE8C600D19BEB /* UIViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				AD64C57A1F7268D300FCD94D /* 动画 */,
 				A7795A201E8DE9A600D19BEB /* 控件 */,
 				A7416EBC1E972EAA00DB503D /* UITableViews */,
 				A7416EB51E972EAA00DB503D /* UIScorllViews */,
@@ -778,6 +793,39 @@
 				AD32FB061F04FE4C00D7E600 /* CircleCustomCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		AD6468671F73B82E00A82A64 /* TableViewAnimationKit */ = {
+			isa = PBXGroup;
+			children = (
+				AD6468731F73B98C00A82A64 /* BaseTableViewController.h */,
+				AD6468741F73B98C00A82A64 /* BaseTableViewController.m */,
+				AD6468681F73B82E00A82A64 /* TableViewAnimationKit.h */,
+				AD6468691F73B82E00A82A64 /* TableViewAnimationKit.m */,
+				AD64686A1F73B82E00A82A64 /* TableViewAnimationKitConfig.h */,
+				AD64686B1F73B82E00A82A64 /* TableViewAnimationKitHeaders.h */,
+				AD64686C1F73B82E00A82A64 /* UITableView+XSAnimationKit.h */,
+				AD64686D1F73B82E00A82A64 /* UITableView+XSAnimationKit.m */,
+			);
+			path = TableViewAnimationKit;
+			sourceTree = "<group>";
+		};
+		AD64C57A1F7268D300FCD94D /* 动画 */ = {
+			isa = PBXGroup;
+			children = (
+				AD64C57B1F7268D300FCD94D /* Cell动画 */,
+			);
+			path = "动画";
+			sourceTree = "<group>";
+		};
+		AD64C57B1F7268D300FCD94D /* Cell动画 */ = {
+			isa = PBXGroup;
+			children = (
+				AD6468471F73B65400A82A64 /* CellAnimationVC.h */,
+				AD6468481F73B65400A82A64 /* CellAnimationVC.m */,
+				AD6468671F73B82E00A82A64 /* TableViewAnimationKit */,
+			);
+			path = "Cell动画";
 			sourceTree = "<group>";
 		};
 		AD6CEAE11F0E38F70013BD7F /* iOS8弹框 */ = {
@@ -1000,7 +1048,9 @@
 				ADA1B6C11EF8FC5700FB68A9 /* UISliderVC.m in Sources */,
 				A7416EC81E972EAA00DB503D /* GradientVC.m in Sources */,
 				AD32FB091F04FE4C00D7E600 /* DrawView.m in Sources */,
+				AD6468751F73B98D00A82A64 /* BaseTableViewController.m in Sources */,
 				AD22D70E1EEFD60900B13AAE /* SettingViewController.m in Sources */,
+				AD6468491F73B65400A82A64 /* CellAnimationVC.m in Sources */,
 				A7416ECE1E97320900DB503D /* CustomCollectionsVC.m in Sources */,
 				AD22D7161EEFD73900B13AAE /* SettingModel.m in Sources */,
 				AD22D70B1EEFD48400B13AAE /* HorizonalTableViewVC.m in Sources */,
@@ -1041,6 +1091,7 @@
 				A7416ECA1E972EAA00DB503D /* MyCell.m in Sources */,
 				AD32FAEA1F04F62500D7E600 /* BloodSugarRecordGeZiView.m in Sources */,
 				A7416EC71E972EAA00DB503D /* ChangeViewScrollVC.m in Sources */,
+				AD64686F1F73B82E00A82A64 /* UITableView+XSAnimationKit.m in Sources */,
 				ADA1B6BB1EF8FC2F00FB68A9 /* UIViewVC.m in Sources */,
 				A73F67E71E8CFB3800C119BE /* MASConstraintMaker.m in Sources */,
 				A75FD95C1E9CD82400D85FA5 /* OMPopoverController.m in Sources */,
@@ -1068,6 +1119,7 @@
 				AD32FAF81F04F9C700D7E600 /* XieXianView.m in Sources */,
 				A7416EC51E972EAA00DB503D /* HorizonalCollectionCell.m in Sources */,
 				A7416EE51E976DB100DB503D /* FDAlertView.m in Sources */,
+				AD64686E1F73B82E00A82A64 /* TableViewAnimationKit.m in Sources */,
 				A7416EE91E976DB100DB503D /* WYStoryboardPopoverSegue.m in Sources */,
 				ADA1B6CA1EF8FC9100FB68A9 /* UISwitchVC.m in Sources */,
 				ADA1B6CE1EF912A000FB68A9 /* KMCloudWebView.m in Sources */,
@@ -1194,6 +1246,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QE8C5ZYQ72;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OMUI/UIPrefixHeader.pch";
 				INFOPLIST_FILE = OMUI/Info.plist;
@@ -1201,6 +1255,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kangmei.OMUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -1208,6 +1263,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QE8C5ZYQ72;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OMUI/UIPrefixHeader.pch";
 				INFOPLIST_FILE = OMUI/Info.plist;
@@ -1215,6 +1272,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kangmei.OMUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
