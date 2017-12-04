@@ -90,6 +90,8 @@
  动画
  */
 #import "CellAnimationVC.h"
+#import "NumberAnimationVCViewController.h" //数字动画
+
 @interface LinkageViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     UITableView *_rightTableView;
@@ -144,7 +146,7 @@
                             @"title":@[@"RdiusViewController",@"ss",@"jj",@"xx",@"yy",@"zz"]},
                           
                           @{@"header":@"动画",
-                            @"title":@[@"cell动画"]}
+                            @"title":@[@"cell动画",@"数字动画"]}
                           
                           ];
     
@@ -443,7 +445,10 @@
                 [self.navigationController pushViewController:gra animated:YES];
             }
             
-            
+            if (indexPath.row == 1) {
+                NumberAnimationVCViewController *vc = [[NumberAnimationVCViewController alloc] init];
+                [self.navigationController pushViewController:vc animated:YES];
+            }
         }
 
     }

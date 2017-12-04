@@ -55,7 +55,7 @@
         
         [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.icon.mas_right).offset(15.0f);
-            make.centerY.equalTo(self.icon.centerY);
+            make.centerY.equalTo(self.icon.mas_centerY).offset(0);
             make.width.equalTo(self.titleLabel.mas_width);
             make.height.equalTo(14.0f);
         }];
