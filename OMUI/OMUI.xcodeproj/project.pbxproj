@@ -73,6 +73,8 @@
 		AD32FB081F04FE4C00D7E600 /* CircleListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32FB011F04FE4C00D7E600 /* CircleListVC.m */; };
 		AD32FB091F04FE4C00D7E600 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32FB041F04FE4C00D7E600 /* DrawView.m */; };
 		AD32FB0A1F04FE4C00D7E600 /* CircleCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32FB061F04FE4C00D7E600 /* CircleCustomCell.m */; };
+		AD5333222074A1EE00AB63A8 /* OMMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5333212074A1EE00AB63A8 /* OMMeViewController.m */; };
+		AD5333252074A79D00AB63A8 /* OMMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5333242074A79D00AB63A8 /* OMMeTableViewCell.m */; };
 		AD6468491F73B65400A82A64 /* CellAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6468481F73B65400A82A64 /* CellAnimationVC.m */; };
 		AD64686E1F73B82E00A82A64 /* TableViewAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6468691F73B82E00A82A64 /* TableViewAnimationKit.m */; };
 		AD64686F1F73B82E00A82A64 /* UITableView+XSAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AD64686D1F73B82E00A82A64 /* UITableView+XSAnimationKit.m */; };
@@ -235,6 +237,10 @@
 		AD32FB041F04FE4C00D7E600 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 		AD32FB051F04FE4C00D7E600 /* CircleCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleCustomCell.h; sourceTree = "<group>"; };
 		AD32FB061F04FE4C00D7E600 /* CircleCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleCustomCell.m; sourceTree = "<group>"; };
+		AD5333202074A1EE00AB63A8 /* OMMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMMeViewController.h; sourceTree = "<group>"; };
+		AD5333212074A1EE00AB63A8 /* OMMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMMeViewController.m; sourceTree = "<group>"; };
+		AD5333232074A79D00AB63A8 /* OMMeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMMeTableViewCell.h; sourceTree = "<group>"; };
+		AD5333242074A79D00AB63A8 /* OMMeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMMeTableViewCell.m; sourceTree = "<group>"; };
 		AD6468471F73B65400A82A64 /* CellAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellAnimationVC.h; sourceTree = "<group>"; };
 		AD6468481F73B65400A82A64 /* CellAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellAnimationVC.m; sourceTree = "<group>"; };
 		AD6468681F73B82E00A82A64 /* TableViewAnimationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewAnimationKit.h; sourceTree = "<group>"; };
@@ -487,6 +493,7 @@
 		A7416EBC1E972EAA00DB503D /* UITableViews */ = {
 			isa = PBXGroup;
 			children = (
+				AD53331D2074A1D100AB63A8 /* 个人中心 */,
 				AD22D7031EEFD48400B13AAE /* 个人资料 */,
 				AD22D7041EEFD48400B13AAE /* 联动 */,
 				AD22D7071EEFD48400B13AAE /* 水平滑动 */,
@@ -797,6 +804,33 @@
 				AD32FB041F04FE4C00D7E600 /* DrawView.m */,
 				AD32FB051F04FE4C00D7E600 /* CircleCustomCell.h */,
 				AD32FB061F04FE4C00D7E600 /* CircleCustomCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD53331D2074A1D100AB63A8 /* 个人中心 */ = {
+			isa = PBXGroup;
+			children = (
+				AD53331E2074A1D100AB63A8 /* Model */,
+				AD53331F2074A1D100AB63A8 /* View */,
+				AD5333202074A1EE00AB63A8 /* OMMeViewController.h */,
+				AD5333212074A1EE00AB63A8 /* OMMeViewController.m */,
+			);
+			path = "个人中心";
+			sourceTree = "<group>";
+		};
+		AD53331E2074A1D100AB63A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AD53331F2074A1D100AB63A8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD5333232074A79D00AB63A8 /* OMMeTableViewCell.h */,
+				AD5333242074A79D00AB63A8 /* OMMeTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1132,6 +1166,7 @@
 				AD32FAD91F04EC9700D7E600 /* TianZiGeTableViewVC.m in Sources */,
 				ADA1B6AF1EF8FBB900FB68A9 /* UILabelVC.m in Sources */,
 				A7795A231E8DE9F000D19BEB /* UserInterfaceVC.m in Sources */,
+				AD5333222074A1EE00AB63A8 /* OMMeViewController.m in Sources */,
 				A73F67EC1E8CFB3800C119BE /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				A73F67E81E8CFB3800C119BE /* MASLayoutConstraint.m in Sources */,
 				ADA1B6B51EF8FBE600FB68A9 /* UIButtonVC.m in Sources */,
@@ -1147,6 +1182,7 @@
 				AD32FAF81F04F9C700D7E600 /* XieXianView.m in Sources */,
 				A7416EC51E972EAA00DB503D /* HorizonalCollectionCell.m in Sources */,
 				A7416EE51E976DB100DB503D /* FDAlertView.m in Sources */,
+				AD5333252074A79D00AB63A8 /* OMMeTableViewCell.m in Sources */,
 				AD64686E1F73B82E00A82A64 /* TableViewAnimationKit.m in Sources */,
 				A7416EE91E976DB100DB503D /* WYStoryboardPopoverSegue.m in Sources */,
 				ADA1B6CA1EF8FC9100FB68A9 /* UISwitchVC.m in Sources */,

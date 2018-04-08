@@ -35,6 +35,7 @@
 #import "HorizonalTableViewVC.h"//水平滑动的UITableView
 #import "LinkageVC.h"           //联动效果
 #import "SettingViewController.h"//设置界面
+#import "OMMeViewController.h"   //个人中心
 #import "TianZiGeTableViewVC.h"  //田字格界面
 #import "CircleListVC.h"        //圈圈
  /*
@@ -125,7 +126,7 @@
                             @"title":@[@"UserInterfaceVC",@"DetailUIVC",@"LazyInitVC",@"每个控件",@"ee",@"ff"]},
                           
                           @{@"header":@"UITableViews",
-                            @"title":@[@"MyViewController",@"水平滑动的UITableView",@"LinkageVC",@"李赛强的设置",@"田字格",@"CircleListVC"]},
+                            @"title":@[@"MyViewController",@"水平滑动的UITableView",@"LinkageVC",@"个人中心(李赛强)",@"个人中心(健康BAT)",@"田字格",@"CircleListVC"]},
                           
                           @{@"header":@"UIScrollView",
                             @"title":@[@"GradientVC",@"ChangeViewScrollVC",@"jj",@"xx",@"yy",@"zz"]},
@@ -157,144 +158,9 @@
     
         
   }
-//创建两个tableview
-- (void)setupSomeParamars
-{
-    _rightTableView = [[UITableView alloc] initWithFrame:CGRectMake(LeftTableViewWidth, 0, RightTableViewWidth, self.view.frame.size.height) style:UITableViewStyleGrouped];
-    _rightTableView.dataSource = self;
-    _rightTableView.delegate = self;
-    [self.view addSubview:_rightTableView];
-    
-    
-    
-    _leftTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, LeftTableViewWidth, self.view.frame.size.height) style:UITableViewStyleGrouped];
-    _leftTableView.dataSource = self;
-    _leftTableView.delegate = self;
-    [self.view addSubview:_leftTableView];
-    
-}
-//添加表头
-- (void)configureHeaderView
-{
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0,RightTableViewWidth, 60)];
-    headerView.backgroundColor = [UIColor whiteColor];
-    UILabel *titleLabel = [UILabel new];
-    titleLabel.frame = headerView.frame;
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.text = @"联动表";
-    [headerView addSubview:titleLabel];
-    _rightTableView.tableHeaderView = headerView;
-
-}
-
-//设置cell的显示
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *reuseIdentifer = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifer];
-    if(!cell){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifer];
-    }
-    if(tableView == _rightTableView){
-        cell.textLabel.text = [_rightTableSource[indexPath.section] objectForKey:@"title"][indexPath.row];
-    }else if (tableView == _leftTableView){
-        cell.textLabel.text = _leftTableSource[indexPath.row];
-    }
-    return cell;
-    
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    if (tableView == _rightTableView) {
-        return 40;
-    }else{
-        return 50;
-    }
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    if (tableView == _rightTableView) {
-        return 0.001;
-    }else
-    {
-        return 0.001;
-    }
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    if (tableView == _rightTableView) {
-        return _rightTableSource.count;
-    }else{
-        return 1;
-    }
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    if (tableView == _leftTableView) {
-        return _leftTableSource.count;
-    }else{
-        return [[_rightTableSource[section] objectForKey:@"title"] count];
-    }
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    if (tableView == _rightTableView) {
-        return [_rightTableSource[section] objectForKey:@"header"];
-    }else{
-        return nil;
-    }
-}
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    if(tableView == _rightTableView){
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width-100, 40)];
-        label.backgroundColor = [UIColor cyanColor];
-        label.text = [_rightTableSource[section] objectForKey:@"header"];
-        label.textColor = [UIColor redColor];
-        return label;
-    }else{
-        return nil;
-    }
-}
-
-/*
- 联动效果在于这里
- 这个方法不准确
- */
-//- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
-//{
-//    if(tableView == _rightTableView){
-//        [_leftTableView selectRowAtIndexPath:[NSIndexPath indexPathForItem:section inSection:0] animated:YES scrollPosition:UITableViewScrollPositionNone];
-//    }
-//}
-
-
-//MARK: - 一个方法就能搞定 右边滑动时跟左边的联动
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    
-    // 如果是 左侧的 tableView 直接return
-    if (scrollView == _leftTableView) return;
-    
-    // 取出显示在 视图 且最靠上 的 cell 的 indexPath
-    NSIndexPath *topHeaderViewIndexpath = [[_rightTableView indexPathsForVisibleRows] firstObject];
-    
-    // 左侧 talbelView 移动的 indexPath
-    NSIndexPath *moveToIndexpath = [NSIndexPath indexPathForRow:topHeaderViewIndexpath.section inSection:0];
-    
-    // 移动 左侧 tableView 到 指定 indexPath 居中显示
-    [_leftTableView selectRowAtIndexPath:moveToIndexpath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
-    
-}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
- 
-
     
     if (_rightTableView == tableView) {
         /*所有控件*/
@@ -350,14 +216,25 @@
                 SettingViewController *vc = [SettingViewController new];
                 [self.navigationController pushViewController:vc animated:YES];
             }
+            else if (indexPath.row == 3)
+            {
+                //设置界面
+                SettingViewController *vc = [SettingViewController new];
+                [self.navigationController pushViewController:vc animated:YES];
+            }
             else if (indexPath.row == 4)
+            {
+                OMMeViewController *vc = [OMMeViewController new];
+                [self.navigationController pushViewController:vc animated:YES];
+            }
+            else if (indexPath.row == 5)
             {
                 TianZiGeTableViewVC *vc = [TianZiGeTableViewVC new];
                 [self.navigationController pushViewController:vc animated:YES];
                 
 
             }
-            else if (indexPath.row == 5)
+            else if (indexPath.row == 6)
             {
                 CircleListVC *vc = [CircleListVC new];
                 [self.navigationController pushViewController:vc animated:YES];
@@ -463,6 +340,138 @@
         
     }
    
+}
+//创建两个tableview
+- (void)setupSomeParamars
+{
+    _rightTableView = [[UITableView alloc] initWithFrame:CGRectMake(LeftTableViewWidth, 0, RightTableViewWidth, self.view.frame.size.height) style:UITableViewStyleGrouped];
+    _rightTableView.dataSource = self;
+    _rightTableView.delegate = self;
+    [self.view addSubview:_rightTableView];
+    
+    
+    
+    _leftTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 15, LeftTableViewWidth, self.view.frame.size.height) style:UITableViewStyleGrouped];
+    _leftTableView.dataSource = self;
+    _leftTableView.delegate = self;
+    [self.view addSubview:_leftTableView];
+    
+}
+//添加表头
+- (void)configureHeaderView
+{
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0,RightTableViewWidth, 60)];
+    headerView.backgroundColor = [UIColor whiteColor];
+    UILabel *titleLabel = [UILabel new];
+    titleLabel.frame = headerView.frame;
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.text = @"联动表";
+    [headerView addSubview:titleLabel];
+    _rightTableView.tableHeaderView = headerView;
+    
+}
+
+//设置cell的显示
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *reuseIdentifer = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifer];
+    if(!cell){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifer];
+    }
+    if(tableView == _rightTableView){
+        cell.textLabel.text = [_rightTableSource[indexPath.section] objectForKey:@"title"][indexPath.row];
+    }else if (tableView == _leftTableView){
+        cell.textLabel.text = _leftTableSource[indexPath.row];
+    }
+    return cell;
+    
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (tableView == _rightTableView) {
+        return 40;
+    }else{
+        return 50;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    if (tableView == _rightTableView) {
+        return 0.001;
+    }else
+    {
+        return 0.001;
+    }
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    if (tableView == _rightTableView) {
+        return _rightTableSource.count;
+    }else{
+        return 1;
+    }
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (tableView == _leftTableView) {
+        return _leftTableSource.count;
+    }else{
+        return [[_rightTableSource[section] objectForKey:@"title"] count];
+    }
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if (tableView == _rightTableView) {
+        return [_rightTableSource[section] objectForKey:@"header"];
+    }else{
+        return nil;
+    }
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    if(tableView == _rightTableView){
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width-100, 40)];
+        label.backgroundColor = [UIColor cyanColor];
+        label.text = [_rightTableSource[section] objectForKey:@"header"];
+        label.textColor = [UIColor redColor];
+        return label;
+    }else{
+        return nil;
+    }
+}
+
+/*
+ 联动效果在于这里
+ 这个方法不准确
+ */
+//- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
+//{
+//    if(tableView == _rightTableView){
+//        [_leftTableView selectRowAtIndexPath:[NSIndexPath indexPathForItem:section inSection:0] animated:YES scrollPosition:UITableViewScrollPositionNone];
+//    }
+//}
+
+
+//MARK: - 一个方法就能搞定 右边滑动时跟左边的联动
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    // 如果是 左侧的 tableView 直接return
+    if (scrollView == _leftTableView) return;
+    
+    // 取出显示在 视图 且最靠上 的 cell 的 indexPath
+    NSIndexPath *topHeaderViewIndexpath = [[_rightTableView indexPathsForVisibleRows] firstObject];
+    
+    // 左侧 talbelView 移动的 indexPath
+    NSIndexPath *moveToIndexpath = [NSIndexPath indexPathForRow:topHeaderViewIndexpath.section inSection:0];
+    
+    // 移动 左侧 tableView 到 指定 indexPath 居中显示
+    [_leftTableView selectRowAtIndexPath:moveToIndexpath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+    
 }
 
 @end
