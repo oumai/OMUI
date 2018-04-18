@@ -27,8 +27,8 @@
     if (self) {
         
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        self.contentView.backgroundColor = KHexColor(@"#ffffff");
-        self.backgroundColor = KHexColor(@"#ffffff");
+        self.contentView.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor whiteColor];
         
         self.icon = [UIImageView new];
         [self.contentView addSubview:_icon];
@@ -36,7 +36,7 @@
         self.titleLabel = [TTTAttributedLabel new];
         self.titleLabel.textColor = KHexColor(@"#555555");
         self.titleLabel.textAlignment = NSTextAlignmentLeft;
-        self.titleLabel.font = KFontSize(14.0f);
+        self.titleLabel.font = [UIFont systemFontOfSize:14];
         [self.contentView addSubview:_titleLabel];
         
         UIView *line = [UIView new];

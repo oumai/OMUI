@@ -176,10 +176,15 @@
     if (!self.tan)
     {
         self.tan = [[TanKuangView alloc] init];
-        self.tan.navigation = self.navigationController;
+        self.tan.navigation = self.navigationController; //传递navigationController
         self.tan.frame = CGRectMake(0, -CoreHeight, CoreWidth, CoreHeight);
         [self.view addSubview:_tan];
         
+        
+        [self.tan setTankuangDismissBlock:^(NSInteger integer) {
+            
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
     }
     [self.tan animationPresent];
 

@@ -691,8 +691,6 @@
 		AD22D7031EEFD48400B13AAE /* 个人资料 */ = {
 			isa = PBXGroup;
 			children = (
-				AD22D70C1EEFD60900B13AAE /* SettingViewController.h */,
-				AD22D70D1EEFD60900B13AAE /* SettingViewController.m */,
 				AD22D70F1EEFD65200B13AAE /* Model */,
 				AD22D7101EEFD65200B13AAE /* View */,
 			);
@@ -711,6 +709,8 @@
 		AD22D7071EEFD48400B13AAE /* 水平滑动 */ = {
 			isa = PBXGroup;
 			children = (
+				AD22D70C1EEFD60900B13AAE /* SettingViewController.h */,
+				AD22D70D1EEFD60900B13AAE /* SettingViewController.m */,
 				AD22D7081EEFD48400B13AAE /* HorizonalTableViewVC.h */,
 				AD22D7091EEFD48400B13AAE /* HorizonalTableViewVC.m */,
 			);

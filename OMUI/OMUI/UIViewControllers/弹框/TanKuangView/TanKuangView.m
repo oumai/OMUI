@@ -149,9 +149,11 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (self.tankuangDismissBlock) {
-        self.tankuangDismissBlock(indexPath.row);
-    }
+    
+    //添加tap之后此方法失效
+//    if (self.tankuangDismissBlock) {
+//        self.tankuangDismissBlock(indexPath.row);
+//    }
 }
 
 - (void)animationPresent
@@ -175,6 +177,13 @@
 - (void)tapTouch
 {
     [self animationedDismiss];
+    [self performSelector:@selector(afterDelayClick) withObject:nil afterDelay:1];
+}
+
+- (void)afterDelayClick
+{
+    [self.navigation popViewControllerAnimated:YES];
+
 }
 
 @end
