@@ -2,8 +2,8 @@
 //  UILabel+Siman.m
 //  OuBoProject
 //
-//  Created by 刘祥 on 15/8/24.
-//  Copyright (c) 2015年 LiuXiang. All rights reserved.
+//  Created by 欧博 on 15/8/24.
+//  Copyright (c) 2015年 Oubo. All rights reserved.
 //
 #define KFontSize(font) [UIFont systemFontOfSize:font]
 

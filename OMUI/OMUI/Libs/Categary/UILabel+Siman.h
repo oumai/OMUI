@@ -2,8 +2,8 @@
 //  UILabel+Siman.h
 //  OuBoProject
 //
-//  Created by 刘祥 on 15/8/24.
-//  Copyright (c) 2015年 LiuXiang. All rights reserved.
+//  Created by 欧博 on 15/8/24.
+//  Copyright (c) 2015年 OuBo. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

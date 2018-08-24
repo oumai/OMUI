@@ -152,7 +152,7 @@
     
     
     self.textField = [UITextField new];
-    self.textField.textColor = KHexColor(@"ff0000");
+    self.textField.textColor = [UIColor colorForHexString:@"ff0000"];
     self.textField.placeholder = @"textField";
     self.textField.secureTextEntry = YES;                        //加密输入
     self.textField.delegate = self;

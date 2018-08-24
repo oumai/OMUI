@@ -210,12 +210,7 @@
                 [self.navigationController pushViewController:vc animated:YES];
 
             }
-            else if (indexPath.row == 3)
-            {
-                //设置界面
-                SettingViewController *vc = [SettingViewController new];
-                [self.navigationController pushViewController:vc animated:YES];
-            }
+          
             else if (indexPath.row == 3)
             {
                 //设置界面

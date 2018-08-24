@@ -2,7 +2,7 @@
 //  NSAttributedString+ParagraphStyle.m
 //  QieyouMerchantHD_V2
 //
-//  Created by 李赛强 on 15/6/17.
+//  Created by 欧博 on 15/6/17.
 //  Copyright (c) 2015年 &#26446;&#36187;&#24378;. All rights reserved.
 //
 

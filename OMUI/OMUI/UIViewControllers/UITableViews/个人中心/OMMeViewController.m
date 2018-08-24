@@ -93,6 +93,7 @@ static NSString *identifier = @"identifierCell";
         _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
         _tableView.dataSource = self;
         _tableView.delegate = self;
+        _tableView.rowHeight = 50;
         _tableView.separatorColor = KHexColor(@"#e6e6e6");
     }
     return _tableView;

@@ -2,8 +2,8 @@
 //  NSString+SQTool.h
 //  SQToolsKit
 //
-//  Created by 李赛强 on 14-11-24.
-//  Copyright (c) 2014年 lisaiqiang. All rights reserved.
+//  Created by 欧博 on 14-11-24.
+//  Copyright (c) 2014年 欧博. All rights reserved.
 //
 
 //#import <Foundation/Foundation.h>
