@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    
+    ///////欧博
     //ViewController
     //LinkageViewController
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[LinkageViewController new]];
