@@ -22,6 +22,8 @@
     ///////欧博
     //ViewController
     //LinkageViewController
+    
+    
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[LinkageViewController new]];
     return YES;
 }

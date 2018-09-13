@@ -26,7 +26,9 @@
 #import "UserInterfaceVC.h"  //所有控件
 #import "DetailUIVC.h"       //所有控件详情
 #import "LazyInitVC.h"       //懒加载创建
+#import "CalendarViewController.h"//日历
 #import "UITableViewVC.h"    //懒加载单独创建
+#import "NavigationViewController.h"//导航栏
 /*
  ②
  UITableViews
@@ -123,7 +125,7 @@
     
     
     _rightTableSource = @[@{@"header":@"所有控件",
-                            @"title":@[@"UserInterfaceVC",@"DetailUIVC",@"LazyInitVC",@"每个控件",@"ee",@"ff"]},
+                            @"title":@[@"UserInterfaceVC",@"DetailUIVC",@"LazyInitVC",@"每个控件",@"导航栏",@"日历"]},
                           
                           @{@"header":@"UITableViews",
                             @"title":@[@"MyViewController",@"水平滑动的UITableView",@"LinkageVC",@"个人中心(李赛强)",@"个人中心(健康BAT)",@"田字格",@"CircleListVC"]},
@@ -186,6 +188,16 @@
                 UITableViewVC *vc = [UITableViewVC new];
                 vc.hidesBottomBarWhenPushed = YES;
                 [self.navigationController pushViewController:vc animated:YES];
+            }
+            else if (indexPath.row == 4)
+            {
+                NavigationViewController *bas = [NavigationViewController new];
+                [self.navigationController pushViewController:bas animated:YES];
+            }
+            else if (indexPath.row == 5)
+            {
+                CalendarViewController *bas = [CalendarViewController new];
+                [self.navigationController pushViewController:bas animated:YES];
             }
         }
         /*

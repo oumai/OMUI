@@ -52,6 +52,10 @@ static NSString *identifier = @"ViewCollectionCell";
 
 
 /*
+ 导航栏
+ */
+
+/*
  手势
  */
 #import "GestureVC.h"

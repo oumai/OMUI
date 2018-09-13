@@ -97,6 +97,8 @@
 		ADCB0B441FD4E53500C1E381 /* NumberAnimationVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCB0B431FD4E53500C1E381 /* NumberAnimationVCViewController.m */; };
 		ADCB0B4A1FD4F11A00C1E381 /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCB0B491FD4F11A00C1E381 /* UICountingLabel.m */; };
 		ADF54D7A1EEA9463001766EB /* LinkageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF54D791EEA9463001766EB /* LinkageViewController.m */; };
+		B5532A12214A8519008D6A44 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5532A11214A8519008D6A44 /* NavigationViewController.m */; };
+		B5532A16214A882C008D6A44 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5532A15214A882C008D6A44 /* CalendarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -290,6 +292,10 @@
 		ADCB0B491FD4F11A00C1E381 /* UICountingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICountingLabel.m; sourceTree = "<group>"; };
 		ADF54D781EEA9463001766EB /* LinkageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkageViewController.h; sourceTree = "<group>"; };
 		ADF54D791EEA9463001766EB /* LinkageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkageViewController.m; sourceTree = "<group>"; };
+		B5532A10214A8519008D6A44 /* NavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		B5532A11214A8519008D6A44 /* NavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		B5532A14214A882C008D6A44 /* CalendarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		B5532A15214A882C008D6A44 /* CalendarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -604,7 +610,9 @@
 		A7795A1F1E8DE8C600D19BEB /* UIViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B5532A0F214A84F9008D6A44 /* 导航栏 */,
 				AD64C57A1F7268D300FCD94D /* 动画 */,
+				B5532A13214A876C008D6A44 /* 日历 */,
 				A7795A201E8DE9A600D19BEB /* 控件 */,
 				A7416EBC1E972EAA00DB503D /* UITableViews */,
 				A7416EB51E972EAA00DB503D /* UIScorllViews */,
@@ -1027,6 +1035,24 @@
 			path = Additions;
 			sourceTree = "<group>";
 		};
+		B5532A0F214A84F9008D6A44 /* 导航栏 */ = {
+			isa = PBXGroup;
+			children = (
+				B5532A10214A8519008D6A44 /* NavigationViewController.h */,
+				B5532A11214A8519008D6A44 /* NavigationViewController.m */,
+			);
+			path = "导航栏";
+			sourceTree = "<group>";
+		};
+		B5532A13214A876C008D6A44 /* 日历 */ = {
+			isa = PBXGroup;
+			children = (
+				B5532A14214A882C008D6A44 /* CalendarViewController.h */,
+				B5532A15214A882C008D6A44 /* CalendarViewController.m */,
+			);
+			path = "日历";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1137,6 +1163,7 @@
 				AD6CEAE41F0E39430013BD7F /* UIAlertControllerVC.m in Sources */,
 				A73F67E91E8CFB3800C119BE /* MASViewAttribute.m in Sources */,
 				ADA1B6C71EF8FC8200FB68A9 /* UIProgressViewVC.m in Sources */,
+				B5532A16214A882C008D6A44 /* CalendarViewController.m in Sources */,
 				ADA1B6BE1EF8FC4400FB68A9 /* UISegmentedControlVC.m in Sources */,
 				A7E53DE91E8FA4CA0099ABC6 /* DetailUIVC.m in Sources */,
 				AD32FAE11F04EE8200D7E600 /* TianZiGeModel.m in Sources */,
@@ -1180,6 +1207,7 @@
 				A73F67E01E8CFB3800C119BE /* UIButton+SQTool.m in Sources */,
 				A73F67E21E8CFB3800C119BE /* UIColor+HNExtensions.m in Sources */,
 				AD32FAF81F04F9C700D7E600 /* XieXianView.m in Sources */,
+				B5532A12214A8519008D6A44 /* NavigationViewController.m in Sources */,
 				A7416EC51E972EAA00DB503D /* HorizonalCollectionCell.m in Sources */,
 				A7416EE51E976DB100DB503D /* FDAlertView.m in Sources */,
 				AD5333252074A79D00AB63A8 /* OMMeTableViewCell.m in Sources */,

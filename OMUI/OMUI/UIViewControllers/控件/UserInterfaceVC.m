@@ -175,6 +175,9 @@
 //    self.button.layer.borderWidth = 1;
 //    self.button.layer.borderColor = KHexColor(@"#ff8787").CGColor;
     
+    
+   
+    
     self.button = [UIButton buttonWithType:UIButtonTypeCustom];
     self.button.titleLabel.font = [UIFont systemFontOfSize:14];
     [self.button setTitle:@"button" forState:UIControlStateNormal];
@@ -189,6 +192,10 @@
         make.width.equalTo(100);
         make.height.equalTo(30);
     }];
+         
+     //button中四个字显示每行两个
+    self.button.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    [self.button setTitle: @"第一行\n第二行" forState: UIControlStateNormal];
 }
 - (void)buttonClick:(UIButton *)button
 {
