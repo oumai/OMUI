@@ -87,6 +87,8 @@
  */
 #import "RadiusViewController.h"
 
+#import "CircleLinesViewController.h"
+#import "ResizableImageVC.h"
 
 /*
  ⑨
@@ -146,7 +148,7 @@
                             @"title":@[@"GradientViewController",@"ss",@"jj",@"xx",@"yy",@"zz"]},
                           
                           @{@"header":@"其他",
-                            @"title":@[@"RdiusViewController",@"ss",@"jj",@"xx",@"yy",@"zz"]},
+                            @"title":@[@"RdiusViewController",@"图片拉伸",@"多线条组成的圆圈",@"xx",@"yy",@"zz"]},
                           
                           @{@"header":@"动画",
                             @"title":@[@"cell动画",@"数字动画"]}
@@ -305,7 +307,7 @@
             [self.navigationController pushViewController:gra animated:YES];
 
         }
-        /*渐变*/
+        /*其他*/
         else if (indexPath.section == 7)
         {
 
@@ -315,9 +317,14 @@
             }
             else if (indexPath.row == 1) {
                 
+                
+                ResizableImageVC *gra = [ResizableImageVC new];
+                [self.navigationController pushViewController:gra animated:YES];
+            
             }
             else if (indexPath.row == 2) {
-                
+                CircleLinesViewController *gra = [CircleLinesViewController new];
+                [self.navigationController pushViewController:gra animated:YES];
             }
         }
         /*动画*/

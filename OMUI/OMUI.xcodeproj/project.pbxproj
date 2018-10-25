@@ -97,6 +97,9 @@
 		ADCB0B441FD4E53500C1E381 /* NumberAnimationVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCB0B431FD4E53500C1E381 /* NumberAnimationVCViewController.m */; };
 		ADCB0B4A1FD4F11A00C1E381 /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCB0B491FD4F11A00C1E381 /* UICountingLabel.m */; };
 		ADF54D7A1EEA9463001766EB /* LinkageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF54D791EEA9463001766EB /* LinkageViewController.m */; };
+		B5489EE22181CEE800251580 /* ResizableImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5489EE12181CEE800251580 /* ResizableImageVC.m */; };
+		B5489EE62181D03C00251580 /* CircleLinesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5489EE52181D03C00251580 /* CircleLinesViewController.m */; };
+		B5489EE92181D05E00251580 /* MichaelCCView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5489EE82181D05E00251580 /* MichaelCCView.m */; };
 		B5532A12214A8519008D6A44 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5532A11214A8519008D6A44 /* NavigationViewController.m */; };
 		B5532A16214A882C008D6A44 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5532A15214A882C008D6A44 /* CalendarViewController.m */; };
 /* End PBXBuildFile section */
@@ -292,6 +295,12 @@
 		ADCB0B491FD4F11A00C1E381 /* UICountingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICountingLabel.m; sourceTree = "<group>"; };
 		ADF54D781EEA9463001766EB /* LinkageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkageViewController.h; sourceTree = "<group>"; };
 		ADF54D791EEA9463001766EB /* LinkageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkageViewController.m; sourceTree = "<group>"; };
+		B5489EE02181CEE800251580 /* ResizableImageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResizableImageVC.h; sourceTree = "<group>"; };
+		B5489EE12181CEE800251580 /* ResizableImageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResizableImageVC.m; sourceTree = "<group>"; };
+		B5489EE42181D03C00251580 /* CircleLinesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleLinesViewController.h; sourceTree = "<group>"; };
+		B5489EE52181D03C00251580 /* CircleLinesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleLinesViewController.m; sourceTree = "<group>"; };
+		B5489EE72181D05D00251580 /* MichaelCCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MichaelCCView.h; sourceTree = "<group>"; };
+		B5489EE82181D05E00251580 /* MichaelCCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MichaelCCView.m; sourceTree = "<group>"; };
 		B5532A10214A8519008D6A44 /* NavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		B5532A11214A8519008D6A44 /* NavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
 		B5532A14214A882C008D6A44 /* CalendarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
@@ -620,6 +629,8 @@
 				A7416ED61E976D9000DB503D /* 弹框 */,
 				A79B66FD1EA9AA3500F4F0FD /* 手势 */,
 				AD22D6F81EEFC94400B13AAE /* 渐变 */,
+				B5489EDF2181CEC000251580 /* 图片拉伸 */,
+				B5489EE32181CFED00251580 /* 多线条组成的圆圈 */,
 				AD22D7171EEFE9BE00B13AAE /* 其他 */,
 			);
 			path = UIViewControllers;
@@ -1035,6 +1046,26 @@
 			path = Additions;
 			sourceTree = "<group>";
 		};
+		B5489EDF2181CEC000251580 /* 图片拉伸 */ = {
+			isa = PBXGroup;
+			children = (
+				B5489EE02181CEE800251580 /* ResizableImageVC.h */,
+				B5489EE12181CEE800251580 /* ResizableImageVC.m */,
+			);
+			path = "图片拉伸";
+			sourceTree = "<group>";
+		};
+		B5489EE32181CFED00251580 /* 多线条组成的圆圈 */ = {
+			isa = PBXGroup;
+			children = (
+				B5489EE42181D03C00251580 /* CircleLinesViewController.h */,
+				B5489EE52181D03C00251580 /* CircleLinesViewController.m */,
+				B5489EE72181D05D00251580 /* MichaelCCView.h */,
+				B5489EE82181D05E00251580 /* MichaelCCView.m */,
+			);
+			path = "多线条组成的圆圈";
+			sourceTree = "<group>";
+		};
 		B5532A0F214A84F9008D6A44 /* 导航栏 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1164,6 +1195,7 @@
 				A73F67E91E8CFB3800C119BE /* MASViewAttribute.m in Sources */,
 				ADA1B6C71EF8FC8200FB68A9 /* UIProgressViewVC.m in Sources */,
 				B5532A16214A882C008D6A44 /* CalendarViewController.m in Sources */,
+				B5489EE22181CEE800251580 /* ResizableImageVC.m in Sources */,
 				ADA1B6BE1EF8FC4400FB68A9 /* UISegmentedControlVC.m in Sources */,
 				A7E53DE91E8FA4CA0099ABC6 /* DetailUIVC.m in Sources */,
 				AD32FAE11F04EE8200D7E600 /* TianZiGeModel.m in Sources */,
@@ -1183,6 +1215,7 @@
 				AD64686F1F73B82E00A82A64 /* UITableView+XSAnimationKit.m in Sources */,
 				ADA1B6BB1EF8FC2F00FB68A9 /* UIViewVC.m in Sources */,
 				A73F67E71E8CFB3800C119BE /* MASConstraintMaker.m in Sources */,
+				B5489EE62181D03C00251580 /* CircleLinesViewController.m in Sources */,
 				A75FD95C1E9CD82400D85FA5 /* OMPopoverController.m in Sources */,
 				ADA1B6C41EF8FC6B00FB68A9 /* UIStepperVC.m in Sources */,
 				AD6D1C721EF76AAE00356E43 /* LazyInitVC.m in Sources */,
@@ -1218,6 +1251,7 @@
 				A79B67001EA9AA8B00F4F0FD /* GestureVC.m in Sources */,
 				A75481761E9B57B2006666C0 /* PopViewController.m in Sources */,
 				A73F67EA1E8CFB3800C119BE /* MASViewConstraint.m in Sources */,
+				B5489EE92181D05E00251580 /* MichaelCCView.m in Sources */,
 				A73F67EE1E8CFB3800C119BE /* TTTAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
